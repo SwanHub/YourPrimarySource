@@ -1,0 +1,5 @@
+<h1><%=@post.title%></h1>
+<h2><%=@post.content%></h2>
+
+<h3>Poster: <%= link_to @post.user.full_name, user_path(@post.user)%></h3>
+<h3>Policy: <%= link_to @post.policy.title, policy_path(@post.policy)%></h3>

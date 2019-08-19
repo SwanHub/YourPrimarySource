@@ -1,0 +1,11 @@
+<h1>Candidate: <%=@candidate.name%></h1>
+
+<ul>
+  <% @candidate.policies.each do |policy|%>
+      <h3>Policy: <%= link_to policy.title, policy_path(policy)%></h3>
+      <p>Description: <%= policy.description%></p>
+      <p>Category: <%= policy.category%></p>
+  <% end %>
+</ul>
+
+<%= link_to "All Candidates", candidates_path%>

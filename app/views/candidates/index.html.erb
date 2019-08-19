@@ -1,0 +1,13 @@
+<h1>All Candidates</h1>
+
+<% @candidates.each do |candidate|%>
+
+  <h2><%=link_to candidate.name, candidate_path(candidate)%></h2>
+  <p>Age: <%= candidate.age%></p>
+  <p>Bio:<%= candidate.bio%></p>
+  <p>Years In Government:<%= candidate.years_in_government%></p>
+  <p>Party:<%= candidate.party%></p>
+  <p>Current Position: <%= candidate.current_position%></p>
+  <p>State: <%= candidate.state%></p>
+  <a target="_blank" href="<%=candidate.website%>" >Website</a>
+<% end%>

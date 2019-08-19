@@ -1,0 +1,199 @@
+HEADER (all pages) ===== voting_link
+
+Candidate
+  has_many policies, through candidate_policy
+
+  Data:
+    name
+    age
+    party
+    progressive / moderate?
+    bio
+    current position
+    years in government
+    state
+    website
+
+Join candidate_policy
+  belongs_to candidate
+  belongs_to policy
+
+  Data:
+    candidate_id
+    policy_id
+
+Policy
+  has_many posts
+  has_many candidates, through candidate_policy
+  has_many users, through posts
+
+  Data:
+    Title
+    Description
+    Assign category (dropdown list)
+
+Posts
+  belongs_to user
+  belongs_to policy
+
+  Data:
+    Title
+    Content
+    Tags (?)
+    candidate_id
+    user_id
+
+User
+  has_many posts
+  has_many policies, through posts
+  (( has_many candidates, through posts, through policies?... ))
+
+  Data:
+    Name
+
+=============================================================================
+
+MAY NEED to create these new tables, not too difficult to implement:
+
+Articles
+  Generated with API calls to NewsApi.org.
+
+Tags
+  self explanatory.
+
+Stretch:::
+  Connect a user to their local representative, voting location, etc.
+  Self-join posts to respond to other posts...
+
+Questions:::
+    API that lists all candidate policies?
+    APIs in general, what can we easily gather?
+
+=============================================================================
+
+1. Have the entire database ready with data, a few fake seeds, relationships established.
+
+2. Vertical slices, one by one.
+      [x]Candidate,
+      [x]Policy,
+      [x]Join Table,
+      [x]User,
+      [x]Post
+
+3. auth
+      [x]Create sessions controller
+      [x]connect sessions to application controller
+      [x]Create Userscontroller related methods
+
+4. complete CRUD
+      [x]Navigation links,
+      Create posts form
+      Update posts form
+      Destroy button
+
+=== On policy show page, (show all posts), button for "add new post"
+      ==> route to post#new form
+      ==> route to post#create (redirect_to policy show page), (sort by most recent)
+=== On post show page, show edit and delete buttons (IF USER_ID == current_user.id)
+      ==> edit leads to edit form
+      ==> delete leads back to policy page
+
+=== note: We need to keep track of policy throughout...
+
+============================================================================
+
+gem 'bcrypt' uncomment in gemfile and run bundle...
+      /gem 'OmniAuth' —> to add auth from providers
+      /gem 'devise' —> for complicated auth needs
+      /gem 'CanCanCan' —> for handling authorization
+      /gem 'pundit' —> complicated permissions models
+Rails.application.routes.draw do
+    root 'users#welcome'
+    get '/login' => 'sessions#new'
+    post '/login' => 'sessions#create'
+    post '/logout' => 'sessions#destroy'
+    resources :users, only: [:new, :create]
+
+end
+
+class ApplicationController < ActionController::Base
+protect_from_forgery with: :exception
+before_action :current_user
+
+    def current_user
+        @user = (User.find_by(id: session[:user_id]) || User.new)
+    end
+
+    def logged_in?
+        current_user.id != nil
+    end
+
+    def require_logged_in
+        if logged_in?
+        else
+            redirect_to(
+                controller: 'sessions',
+                action: 'new'
+            )
+        end
+    end
+end
+
+class UsersController < ApplicationController
+———> in schema t.string "password_digest"
+———> in model "has_secure_password"
+    def new
+    end
+
+    def create
+        @user = User.create(user_params)
+        if @user.save
+            session[:user_id] = @user.id
+            redirect_to(
+                controller: 'users',
+                action: 'welcome'
+            )
+        else
+            redirect_to(
+                controller: 'users',
+                action: 'new'
+            )
+        end
+    end
+
+    def welcome
+        require_logged_in —> or welcome_controller validates with before_action
+        @user = User.find_by(id: session[:user_id]) —> users/views/welcome
+    end
+
+private
+
+    def user_params
+        params.require(:user).permit(:name, :password, :password_confirmation)
+    end
+end
+
+class SessionsController < ApplicationController
+    def new
+    end
+
+    def create
+        user = User.find_by(name: params[:user][:name])
+        user = user.try(:authenticate, params[:user][:password]) #allows for redirection if user does not exist
+        if user
+            session[:user_id] = user.id
+            @user = user
+            redirect_to(controller: 'users', action: 'welcome')
+        else
+            redirect_to(controller: 'sessions', action: 'new')
+        end
+    end
+
+    def destroy     ———————------—>  <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+                                          <input type=submit value='logout'>
+                                      <% end %>
+
+        session.delete :user_id
+        redirect_to '/'
+    end
+end
