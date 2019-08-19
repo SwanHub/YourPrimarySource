@@ -12,4 +12,11 @@
   <p>Content: <%= post.content%></p>
 <% end %>
 
+<%= form_tag("/posts/new", method: "get") do %>
+  <input type="hidden" name="policy[id]" value="<%=@policy.id%>">
+  <button class="inputbutton" type="submit">
+    Create New Post
+  </button>
+<% end %>
+
 <%= link_to "All Policies", policies_path%>
