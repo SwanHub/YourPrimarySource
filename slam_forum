@@ -57,12 +57,19 @@ MAY NEED to create these new tables, not too difficult to implement:
 
 Articles
   Generated with API calls to NewsApi.org.
+      "See recent articles" button, to controller for articles, creates new
+      api request with "candidates_name" in the url search. That basic
+      information then added to articles table, and presented in the candidate
+      show page.
 
 Tags
   self explanatory.
 
 Stretch:::
   Connect a user to their local representative, voting location, etc.
+      (Voting Info Project)... Civic API.
+      User provides location, we provide all relevant voting information they need.
+      Question:
   Self-join posts to respond to other posts...
 
 Questions:::
@@ -70,6 +77,7 @@ Questions:::
     APIs in general, what can we easily gather?
 
 =================================================================
+  Day 1:: Relationships, CRUD, some basic styling.
 
 1. Have the entire database ready with data, a few fake seeds, relationships established.
 
@@ -95,12 +103,19 @@ Questions:::
       [x]delete leads back to policy page
 
 ===============================================================
+  Day 2:: Data, Styling.
+
+    ==
 
     Black and white primary with splash of color (bright red?)
     double lines?
     muted blue (headers / categories / links)
     bold red (highlight)
     Flexbox == let's get it to scale correctly.
+
+  Day 3:: Methods and Styling.
+
+
 
 
 ===============================================================
