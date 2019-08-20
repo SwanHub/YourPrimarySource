@@ -11,22 +11,23 @@
 
   <body>
 
-    <nav>
-      <div class="nav-list">
+    <nav class="nav_bar">
 
-        <% if current_user %>
-            <p><%= link_to "Profile", user_path(current_user)%></p>
-            <p><%= link_to "Campaigns", candidates_path%></p>
-            <p><%= link_to "Log Out", logout_path%></p>
-        <% else %>
-            <p><%= link_to "Sign Up", signup_path%></p>
-            <p><%= link_to "Log In", login_path%></p>
-        <% end %>
-        <figure>
-          <img class="logo" src="https://files.slack.com/files-pri/T02MD9XTF-FMB95L6P3/your_primary_source_logo__1_.png" alt="">
-        </figure>
+      <div class="nav-list">
+        <div class="nav_items">
+          <% if current_user %>
+              <p class="nav_item"><%= link_to "Profile", user_path(current_user)%></p>
+              <p class="nav_item"><%= link_to "Candidates", candidates_path%></p>
+              <p class="nav_item"><%= link_to "Log Out", logout_path%></p>
+          <% else %>
+              <p class="nav_item"><%= link_to "Sign Up", signup_path%></p>
+              <p class="nav_item"><%= link_to "Log In", login_path%></p>
+          <% end %>
+        </div>
       </div>
+      <img class="nav-list" src="https://user-images.githubusercontent.com/48773391/63361852-1f25e580-c32e-11e9-82a0-d7d627fad339.png" alt="">
     </nav>
+
 
     <% flash.each do |name, msg|%>
       <%= content_tag :div, msg.html_safe%>

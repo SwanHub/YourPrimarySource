@@ -14,17 +14,29 @@
  *= require_self
  */
 
- .nav-list {
-   display: flex;
-   justify-content: flex-end;
+
+ html {
+   box-sizing: border-box;
  }
 
- .nav-list p {
+ .nav_bar {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+ }
+
+ .nav_bar .nav-list {
    margin: 10px;
  }
 
  .nav-list h1 {
    text-align:center;
+ }
+
+ div.nav_items {
+   display: flex;
+   justify-content: space-between;
+   width: 150%;
  }
 
 h1 {
