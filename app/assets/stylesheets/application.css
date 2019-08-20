@@ -22,3 +22,45 @@
  .nav-list p {
    margin: 10px;
  }
+
+ .nav-list h1 {
+   text-align:center;
+ }
+
+h1 {
+  font-family: 'Minion Pro', serif;
+  font-weight: lighter;
+}
+
+
+h2 {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-weight: lighter;
+}
+
+h3 {
+  font-family: 'Garamond', serif;
+  font-size: 22px;
+  font-weight: lighter;
+  text-decoration: none;
+  font-style: italic;
+  color: black;
+}
+
+h3 a {
+  font-family: 'Garamond', serif;
+  font-size: 22px;
+  font-weight: lighter;
+  text-decoration: none;
+  font-style: italic;
+  color: black;
+}
+
+h3 a:hover {
+  color: blue;
+}
+
+body {
+  font-family: 'NYT Imperial', sans-serif;
+  font-weight: lighter;
+}

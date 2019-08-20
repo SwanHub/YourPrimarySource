@@ -51,7 +51,7 @@ User
   Data:
     Name
 
-=============================================================================
+=================================================================
 
 MAY NEED to create these new tables, not too difficult to implement:
 
@@ -69,7 +69,7 @@ Questions:::
     API that lists all candidate policies?
     APIs in general, what can we easily gather?
 
-=============================================================================
+=================================================================
 
 1. Have the entire database ready with data, a few fake seeds, relationships established.
 
@@ -88,19 +88,22 @@ Questions:::
 4. complete CRUD
       [x]Navigation links,
       [x]Create posts form
-      Update posts form
-      Destroy button
+      [x]Update posts form
+      [x]Destroy button
+      [x]sort posts by most recent
+      [x]edit leads to edit form
+      [x]delete leads back to policy page
 
-=== On policy show page, (show all posts), button for "add new post"
-      ==> route to post#new form
-      ==> route to post#create (redirect_to policy show page), (sort by most recent)
-=== On post show page, show edit and delete buttons (IF USER_ID == current_user.id)
-      ==> edit leads to edit form
-      ==> delete leads back to policy page
+===============================================================
 
-=== note: We need to keep track of policy throughout...
+    Black and white primary with splash of color (bright red?)
+    double lines?
+    muted blue (headers / categories / links)
+    bold red (highlight)
+    Flexbox == let's get it to scale correctly.
 
-============================================================================
+
+===============================================================
 
 gem 'bcrypt' uncomment in gemfile and run bundle...
       /gem 'OmniAuth' —> to add auth from providers

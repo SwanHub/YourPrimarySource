@@ -1,5 +1,22 @@
-<h1><%=@post.title%></h1>
-<h2><%=@post.content%></h2>
+<h1>Title: <%=@post.title%></h1>
+<h2>Content: <%=@post.content%></h2>
 
 <h3>Poster: <%= link_to @post.user.full_name, user_path(@post.user)%></h3>
 <h3>Policy: <%= link_to @post.policy.title, policy_path(@post.policy)%></h3>
+
+<% if @post.user.id == current_user.id %>
+  <%= form_tag("/posts/:id/edit", method: "get") do %>
+   <input type="hidden" name="post[id]" value="<%=@post.id%>">
+   <button class="nav-button" type="submit">
+     Edit Post
+   </button>
+   <% end %>
+
+   <%= form_tag("/posts/:id", method: "delete") do %>
+    <input type="hidden" name="policy[id]" value="<%=@post.policy.id%>">
+    <input type="hidden" name="post[id]" value="<%=@post.id%>">
+    <button class="nav-button" type="submit">
+      Delete Post
+    </button>
+  <% end %>
+<% end %>

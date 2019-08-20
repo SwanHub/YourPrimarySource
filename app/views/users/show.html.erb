@@ -5,6 +5,7 @@
   <% @user.posts.each do |post|%>
   <h3><%= link_to post.title, post_path(post)%></h3>
   <p>Content: <%= post.content%></p>
+  <span>_______________________</span>
   <% end %>
 </ul>
 
@@ -14,6 +15,7 @@
       <h3><%= link_to policy.title, policy_path(policy)%></h3>
       <p>Description: <%= policy.description%></p>
       <p>Category: <%= policy.category%></p>
+      <span>_______________________</span>
   <% end %>
 </ul>
 
