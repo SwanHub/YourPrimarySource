@@ -66,6 +66,7 @@ Tags
   self explanatory.
 
 Stretch:::
+  Deployment
   Connect a user to their local representative, voting location, etc.
       (Voting Info Project)... Civic API.
       User provides location, we provide all relevant voting information they need.
@@ -105,8 +106,9 @@ Questions:::
 
 ===============================================================
   Day 2:: Data, Styling.
-      [x]Collect data for all candidates.
-      [x]Seed in database.
+      [x]Policies seed
+      [x]Seed polling data
+      Collect financial data for all candidates.
       Get basic styling done for all pages.
       Create API to news articles related to candidates...
 
@@ -220,11 +222,3 @@ class SessionsController < ApplicationController
         redirect_to '/'
     end
 end
-
-
-
-i = 1
-2.6.1 :023 > 106.times do
-2.6.1 :024 >     new << {source: sources[i], date: dates[i], value: biden[i]}
-2.6.1 :025?>   i += 1
-2.6.1 :026?>   end
