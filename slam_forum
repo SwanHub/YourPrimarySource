@@ -105,8 +105,8 @@ Questions:::
 
 ===============================================================
   Day 2:: Data, Styling.
-      Collect data for all candidates.
-      Seed in database.
+      [x]Collect data for all candidates.
+      [x]Seed in database.
       Get basic styling done for all pages.
       Create API to news articles related to candidates...
 
