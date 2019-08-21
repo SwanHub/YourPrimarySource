@@ -1,6 +1,5 @@
-<h1>Policy Title: <%=@policy.title%></h1>
-<h2>Category: <%=@policy.category%></h2>
-<h3>Description: <%=@policy.description%></h3>
+<h1><%=@policy.title%></h1>
+<h3><%=@policy.description%></h3>
 
 <h2 ><% @policy.candidates.each do |candidate|%>
     Candidate: <%= link_to candidate.name, candidate_path(candidate)%>

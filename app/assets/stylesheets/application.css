@@ -56,6 +56,7 @@
    font-family: 'NYT Imperial', sans-serif;
    font-weight: lighter;
    text-align: center;
+   margin-top:0;
  }
 
  .nav_bar {
@@ -64,6 +65,8 @@
    width: 100%;
    border-bottom-style: double;
    border-bottom-color: rgb(21, 21, 21, 0.1);
+   position: fixed;
+   background-color: #fff;
  }
 
  .nav_bar .nav-list {
@@ -75,10 +78,14 @@
    text-align:center;
  }
 
+ .main_logo {
+   margin-top: 60px;
+ }
+
  div.nav_items {
    display: flex;
    justify-content: space-between;
-   width: 150%;
+   width: 125%;
  }
 
  p.nav_item a {
@@ -129,7 +136,7 @@
 }
 
 .candidate_title {
-  margin-top: -46px;
+  margin-top: 0px;
 }
 
 .candidate_basics {
@@ -160,6 +167,7 @@
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
+  margin-top: -10px;
 }
 
 .fa:hover {
