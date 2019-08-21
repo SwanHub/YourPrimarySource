@@ -220,3 +220,11 @@ class SessionsController < ApplicationController
         redirect_to '/'
     end
 end
+
+
+
+i = 1
+2.6.1 :023 > 106.times do
+2.6.1 :024 >     new << {source: sources[i], date: dates[i], value: biden[i]}
+2.6.1 :025?>   i += 1
+2.6.1 :026?>   end
