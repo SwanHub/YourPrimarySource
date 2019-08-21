@@ -4,7 +4,7 @@
     <title>YourPrimarySource</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -14,17 +14,20 @@
     <nav class="nav_bar">
 
       <div class="nav-list">
-        <div class="nav_items">
-          <% if current_user %>
-              <p class="nav_item"><%= link_to "Profile", user_path(current_user)%></p>
-              <p class="nav_item"><%= link_to "Candidates", candidates_path%></p>
-              <p class="nav_item"><%= link_to "Log Out", logout_path%></p>
-          <% else %>
-              <p class="nav_item"><%= link_to "Sign Up", signup_path%></p>
-              <p class="nav_item"><%= link_to "Log In", login_path%></p>
-          <% end %>
+        <div class="nav-items-container">
+          <div class="nav_items">
+            <% if current_user %>
+                <p class="nav_item"><%= link_to "My Profile", user_path(current_user)%></p>
+                <p class="nav_item"><%= link_to "Candidates", candidates_path%></p>
+                <p class="nav_item"><%= link_to "Log Out", logout_path%></p>
+            <% else %>
+                <p class="nav_item"><%= link_to "Sign Up", signup_path%></p>
+                <p class="nav_item"><%= link_to "Log In", login_path%></p>
+            <% end %>
+          </div>
         </div>
       </div>
+
       <img class="nav-list" src="https://user-images.githubusercontent.com/48773391/63361852-1f25e580-c32e-11e9-82a0-d7d627fad339.png" alt="">
     </nav>
 

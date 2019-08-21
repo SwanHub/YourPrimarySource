@@ -1,11 +1,33 @@
-<h1>Candidate: <%=@candidate.name%></h1>
 
-<ul>
-  <% @candidate.policies.each do |policy|%>
-      <h3>Policy: <%= link_to policy.title, policy_path(policy)%></h3>
-      <p>Description: <%= policy.description%></p>
-      <p>Category: <%= policy.category%></p>
-  <% end %>
-</ul>
+  <h1 class="candidate_title"><%=@candidate.name%></h1>
+  <a target="_blank" href=<%=@candidate.twitter%> class="fa fa-twitter"></a>
 
-<%= link_to "All Candidates", candidates_path%>
+<div class="candidate_container">
+
+    <div class="candidate_basics">
+      <h2>Candidate Information</h2>
+      <img style="width:100px;" src="<%=@candidate.image%>" alt="<%=@candidate.name%>">
+      <p><span><%=@candidate.age%> yrs</span></p>
+      <p><span>Born in <%=@candidate.born%></span></p>
+      <p><span><%=@candidate.current_position%></span></p>
+      <p class="text-justify"><span><%=@candidate.bio%></span></p>
+      <a href=<%=@candidate.website%>>Website</a><br>
+    </div>
+
+    <div class="candidate_policies">
+      <h2>Policies</h2>
+        <% @candidate.policies.each do |policy|%>
+            <h3><%= link_to policy.title, policy_path(policy)%></h3>
+        <% end %>
+    </div>
+
+    <div class="candidate_articles">
+      <h2>Recent Articles</h2>
+        <% @candidate.policies.each do |policy|%>
+            <h3>Policy: <%= link_to policy.title, policy_path(policy)%></h3>
+            <p>Category: <%= policy.category%></p>
+            <p>Description: <%= policy.description%></p>
+        <% end %>
+  </div>
+
+</div>
