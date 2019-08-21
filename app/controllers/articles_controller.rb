@@ -2,23 +2,20 @@ class ArticlesController < ApplicationController
 
   def create
       @candidate = Candidate.find(params[:candidate][:id])
-      get_article = Article.get_one_for(@candidate.urlify)
-      @article = Article.new(title: get_article["title"],
-                            description: get_article["description"],
-                            source: get_article["source"]["name"],
-                            author: get_article["author"],
-                            publish_date: get_article["publishedAt"].to_date,
-                            url: get_article["url"],
-                            urlToImage: get_article["urlToImage"],
-                            candidate_id: @candidate.id)
-
-      if @article.save
-        redirect_to candidate_path(@candidate)
-      else
-        flash[:notice] = "You're up to date on the latest."
-        redirect_to candidate_path(@candidate)
+      five_articles = Article.get_five_recent_for(@candidate.urlify)
+      byebug
+      five_articles.each do |article|
+          Article.create(title: article["title"],
+                              description: article["description"],
+                              source: article["source"]["name"],
+                              author: article["author"],
+                              publish_date: article["publishedAt"].to_date,
+                              url: article["url"],
+                              urlToImage: article["urlToImage"],
+                              candidate_id: @candidate.id)
       end
 
+      redirect_to candidate_path(@candidate)
   end
 
 end

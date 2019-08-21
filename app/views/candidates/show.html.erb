@@ -31,8 +31,7 @@
             <% @candidate.articles.each do |article|%>
                 <h3><a target="_blank" href="<%=article.url%>"><%=article.title%></a></h3>
                 <p class="text-justify">Description: <%= article.description%></p>
-                <p><%= article.source%></p>
-                <p class="text-justify"><%= article.author%></p>
+                <p><%= article.source%>: <%= article.author%></p>
                 <p><%= article.publish_date%></p>
             <% end %>
       </div>
