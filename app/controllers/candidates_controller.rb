@@ -6,6 +6,7 @@ class CandidatesController < ApplicationController
 
   def show
       @candidate = Candidate.find(params[:id])
+      @article = Article.new
   end
 
 end

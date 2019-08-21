@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_181545) do
+ActiveRecord::Schema.define(version: 2019_08_21_193146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "source"
+    t.string "author"
+    t.date "publish_date"
+    t.text "url"
+    t.text "urlToImage"
+    t.text "content"
+    t.bigint "candidate_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["candidate_id"], name: "index_articles_on_candidate_id"
+  end
 
   create_table "candidate_policies", force: :cascade do |t|
     t.bigint "candidate_id"
@@ -79,6 +94,7 @@ ActiveRecord::Schema.define(version: 2019_08_21_181545) do
     t.string "password_digest"
   end
 
+  add_foreign_key "articles", "candidates"
   add_foreign_key "candidate_policies", "candidates"
   add_foreign_key "candidate_policies", "policies"
   add_foreign_key "polls", "candidates"

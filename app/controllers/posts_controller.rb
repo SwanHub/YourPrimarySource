@@ -33,7 +33,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    byebug
     @policy = Policy.find(params[:policy][:id])
     @post = Post.find(params[:post][:id])
     @post.delete

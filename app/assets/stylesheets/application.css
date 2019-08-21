@@ -142,16 +142,22 @@
 .candidate_basics {
   border: 1px solid rgb(21, 21, 21, 0.1);
   width: 30%;
+  height: 600px;
+  overflow: auto
 }
 
 .candidate_policies {
   border: 1px solid rgb(21, 21, 21, 0.1);
   width: 30%;
+  height: 600px;
+  overflow: auto
 }
 
 .candidate_articles {
   border: 1px solid rgb(21, 21, 21, 0.1);
   width: 30%;
+  height: 600px;
+  overflow: auto
 }
 
 .text-justify {
@@ -177,4 +183,10 @@
 .fa-twitter {
   background: #55ACEE;
   color: white;
+}
+
+/* POLICY! */
+
+.policy_header {
+  width: 75%;
 }

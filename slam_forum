@@ -105,7 +105,7 @@ Questions:::
       [x]delete leads back to policy page
 
 ===============================================================
-  Day 2:: Data, Styling.
+  Day 3:: Data, Styling.
       [x]Policies seed
       [x]Seed polling data
       Collect financial data for all candidates.
@@ -114,13 +114,7 @@ Questions:::
 
     ==
 
-    Black and white primary with splash of color (bright red?)
-    double lines?
-    muted blue (headers / categories / links)
-    bold red (highlight)
-    Flexbox == let's get it to scale correctly.
-
-  Day 3:: Methods and Styling.
+  Day 4:: Methods and Styling.
 
 
 
