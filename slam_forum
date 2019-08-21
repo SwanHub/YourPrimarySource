@@ -71,6 +71,7 @@ Stretch:::
       User provides location, we provide all relevant voting information they need.
       Question:
   Self-join posts to respond to other posts...
+  GeoLocation of posts...
 
 Questions:::
     API that lists all candidate policies?
