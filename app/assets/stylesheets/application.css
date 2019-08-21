@@ -181,12 +181,11 @@
 }
 
 .fa-twitter {
-  background: #55ACEE;
+  background-image: radial-gradient(#55ACEE, rgb(42, 0, 192));
   color: white;
 }
 
 /* POLICY! */
-
 .policy_header {
   width: 75%;
 }
