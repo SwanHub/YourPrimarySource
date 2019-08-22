@@ -1,5 +1,6 @@
 <form action="/policies" method="get">
   <select class="policy_dropdown" name="policy[policy_name]" id="policy_name">
+    <option></option>
     <option>Healthcare</option>
     <option>Immigration</option>
     <option>The Climate Crisis</option>
@@ -18,20 +19,29 @@
     <option>Family Issues</option>
     <option>Business and Teach Regulation</option>
   </select>
-  <input type="submit" name="commit" value="Get the policy">
+  <input type="submit" name="commit" value="Policy">
+
+  <select class="policy_dropdown" name="policcy[candidate_name]" id="candidate_name">
+    <option></option>
+    <%=@candidates.each do |candidate|%>
+      <option value="<%=candidate.id%>"><%=candidate.name%></option>
+    <% end%>
+  </select>
+  <input type="submit" name="commit" value="Candidate">
 </form>
 
-<% @policies.each do |policy|%>
-  <div class="policy_card">
+<% if @policies %>
+  <% @policies.each do |policy|%>
+    <div class="policy_card">
 
-    <div class="policy_item">
-      <p><%= link_to policy.candidates.first.name, candidate_path(policy.candidates.first)%></p>
-      <img class="policy_image" src="<%=policy.candidates.first.image%>" alt="<%=policy.candidates.first.name%>">
+      <div class="policy_item">
+        <p><%= link_to policy.candidates.first.name, candidate_path(policy.candidates.first)%></p>
+        <img class="policy_image" src="<%=policy.candidates.first.image%>" alt="<%=policy.candidates.first.name%>">
+      </div>
+
+      <div class="policy_item">
+        <p class="description"><%= policy.description%></p>
+      </div>
     </div>
-
-    <div class="policy_item">
-      <p>Description: <%= policy.description%></p>
-    </div>
-
-  </div>
-<% end%>
+  <% end%>
+<% end %>
