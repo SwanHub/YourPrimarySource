@@ -66,7 +66,7 @@ require 'csv'
 CandidatePolicy.destroy_all
 Policy.destroy_all
 Candidate.destroy_all
-User.destroy_all
+# User.destroy_all
 
 Candidate.create(
   name: "Tulsi Gabbard",
