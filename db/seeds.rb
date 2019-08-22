@@ -44,6 +44,10 @@ require 'csv'
 #   Poll.create(value: poll[:value], date: poll[:date], source: poll[:source], candidate_id: 24)
 # end
 
+CandidatePolicy.destroy_all
+Policy.destroy_all
+Candidate.destroy_all
+User.destroy_all
 
 Candidate.create(
   name: "Tulsi Gabbard",
@@ -320,3 +324,212 @@ Candidate.create(
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Kamala_Harris_2020_presidential_campaign_logo.svg/1200px-Kamala_Harris_2020_presidential_campaign_logo.svg.png",
     image: "https://images-na.ssl-images-amazon.com/images/I/61q8syRNTDL._SY679_.jpg",
     born: "Oakland, California")
+
+@user_1 = User.create(first_name: "user1", last_name: "user1", username: "user1", password_digest: "user1")
+@user_2 = User.create(first_name: "user2", last_name: "user2", username: "user2", password_digest: "user2")
+@user_3 = User.create(first_name: "user3", last_name: "user3", username: "user3", password_digest: "user3")
+
+
+csv = CSV.read("policies3.csv")
+
+i = 1
+23.times do
+    if csv[0][i]
+     policy_created = Policy.create(title: csv[0][i], description: csv[1][i])
+     CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[1][0]).id, policy_id: policy_created.id)
+     i+=1
+   end
+  end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[2][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[2][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[3][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[3][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[4][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[4][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[5][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[5][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[6][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[6][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[7][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[7][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[8][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[8][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[9][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[9][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[10][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[10][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+    i = 1
+    23.times do
+        if csv[0][i]
+         policy_created = Policy.create(title: csv[0][i], description: csv[11][i])
+         CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[11][0]).id, policy_id: policy_created.id)
+         i+=1
+       end
+      end
+
+    i = 1
+    23.times do
+        if csv[0][i]
+         policy_created = Policy.create(title: csv[0][i], description: csv[12][i])
+         CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[12][0]).id, policy_id: policy_created.id)
+         i+=1
+       end
+      end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[13][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[13][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[14][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[14][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[15][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[15][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[16][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[16][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[17][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[17][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[18][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[18][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[19][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[19][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[20][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[20][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[21][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[21][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[22][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[22][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end
+  i = 1
+  23.times do
+      if csv[0][i]
+       policy_created = Policy.create(title: csv[0][i], description: csv[23][i])
+       CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[23][0]).id, policy_id: policy_created.id)
+       i+=1
+     end
+    end

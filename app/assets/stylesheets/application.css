@@ -317,8 +317,17 @@ div.double_bottom_border {
 
 .policy_card {
   display: flex;
+  width: 30%;
+  margin: auto;
 }
 
 .policy_item {
   justify-content: flex-start;
+  text-align: justify;
+  text-align-last:center;
+}
+
+.description {
+  margin-top: 50px;
+  margin-left: 10px;
 }
