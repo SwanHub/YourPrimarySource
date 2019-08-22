@@ -45,12 +45,12 @@ require 'csv'
 # column += 1
 # end
 
-#
+# csv = CSV.read("new_polling.csv")
+
 # sources = csv.map{|row| row[0]}
 # dates = csv.map{|row| row[1]}
-# candidate = csv.map{|row| row[14]}
-# # williamson 14
-#
+# candidate = csv.map{|row| row[CHANGES, depending on candidate column in the csv doc.]}
+
 # candidate_array = []
 # i = 1
 # 106.times do
@@ -59,7 +59,7 @@ require 'csv'
 # end
 #
 # candidate_array.each do |poll|
-#   Poll.create(value: poll[:value], date: poll[:date], source: poll[:source], candidate_id: 24)
+#   Poll.create(value: poll[:value], date: poll[:date], source: poll[:source], candidate_id: CHANGES depending on candidate_id)
 # end
 
 
