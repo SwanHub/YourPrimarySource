@@ -27,6 +27,24 @@ require 'csv'
 #     i += 1
 # end
 
+# csv = CSV.read("policies3.csv")
+#
+# row = 1
+# 23.times do
+#
+#         i = 1
+#         23.times do
+#           if csv[row][i]
+#             policy_created = Policy.create(title: csv[0][i], description: csv[row][i])
+#
+#             CandidatePolicy.create(candidate_id: Candidate.find_by(name: csv[row][0]).id, policy_id: policy_created.id)
+#             i += 1
+#           end
+#         end
+#
+# column += 1
+# end
+
 #
 # sources = csv.map{|row| row[0]}
 # dates = csv.map{|row| row[1]}
@@ -43,6 +61,7 @@ require 'csv'
 # candidate_array.each do |poll|
 #   Poll.create(value: poll[:value], date: poll[:date], source: poll[:source], candidate_id: 24)
 # end
+
 
 CandidatePolicy.destroy_all
 Policy.destroy_all
