@@ -202,110 +202,110 @@ Candidate.create(
     image: "https://live.staticflickr.com/539/32768464765_0a70139999_b.jpg",
     born: "Seattle, Washington")
 
-    Candidate.create(
-      name: "Beto O'Rourke",
-      age: 46,
-      bio: "Robert Francis 'Beto' O'Rourke (born September 26, 1972) is an American politician who represented Texas's 16th congressional district in the United States House of Representatives from 2013 to 2019. O'Rourke is seeking the Democratic nomination for President of the United States in 2020.",
-      current_position: "U.S. Representative",
-      state: "Texas",
-      website: "https://betoorourke.com/",
-      twitter: "https://twitter.com/BetoORourke",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Beto_O%27Rourke_2020_presidential_campaign_logo.svg/1200px-Beto_O%27Rourke_2020_presidential_campaign_logo.svg.png",
-      image: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Beto_O%27Rourke%2C_Official_portrait%2C_113th_Congress.jpg",
-      born: "El Paso, Texas")
+  Candidate.create(
+    name: "Beto O'Rourke",
+    age: 46,
+    bio: "Robert Francis 'Beto' O'Rourke (born September 26, 1972) is an American politician who represented Texas's 16th congressional district in the United States House of Representatives from 2013 to 2019. O'Rourke is seeking the Democratic nomination for President of the United States in 2020.",
+    current_position: "U.S. Representative",
+    state: "Texas",
+    website: "https://betoorourke.com/",
+    twitter: "https://twitter.com/BetoORourke",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Beto_O%27Rourke_2020_presidential_campaign_logo.svg/1200px-Beto_O%27Rourke_2020_presidential_campaign_logo.svg.png",
+    image: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Beto_O%27Rourke%2C_Official_portrait%2C_113th_Congress.jpg",
+    born: "El Paso, Texas")
 
-    Candidate.create(
-      name: "Amy Klobuchar",
-      age: 59,
-      bio: "Amy Jean Klobuchar (born May 25, 1960) is an American lawyer and politician serving as the senior United States Senator from Minnesota. A member of the Minnesota Democratic-Farmer-Labor Party, Minnesota's affiliate of the Democratic Party, she previously served as the Hennepin County Attorney.",
-      current_position: "U.S. Senator",
-      state: "Minnesota",
-      website: "https://amyklobuchar.com/",
-      twitter: "https://twitter.com/amyklobuchar",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Amy_Klobuchar_2020_presidential_campaign_logo.svg/1280px-Amy_Klobuchar_2020_presidential_campaign_logo.svg.pn",
-      image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Amy_Klobuchar%2C_official_portrait%2C_113th_Congress_%28cropped%29.jpg",
-      born: "Plymouth, Minnesota")
+  Candidate.create(
+    name: "Amy Klobuchar",
+    age: 59,
+    bio: "Amy Jean Klobuchar (born May 25, 1960) is an American lawyer and politician serving as the senior United States Senator from Minnesota. A member of the Minnesota Democratic-Farmer-Labor Party, Minnesota's affiliate of the Democratic Party, she previously served as the Hennepin County Attorney.",
+    current_position: "U.S. Senator",
+    state: "Minnesota",
+    website: "https://amyklobuchar.com/",
+    twitter: "https://twitter.com/amyklobuchar",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Amy_Klobuchar_2020_presidential_campaign_logo.svg/1280px-Amy_Klobuchar_2020_presidential_campaign_logo.svg.pn",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Amy_Klobuchar%2C_official_portrait%2C_113th_Congress_%28cropped%29.jpg",
+    born: "Plymouth, Minnesota")
 
-    Candidate.create(
-      name: "Wayne Messam",
-      age: 45,
-      bio: "Wayne Martin Messam (born June 7, 1974) is an American businessman and politician serving as the mayor of Miramar, Florida, a position he has held since 2015. A member of the Democratic Party, he was first elected to the Miramar City Commission in 2011 before defeating incumbent mayor Lori Cohen Moseley in the 2015 election. Messam is also a general contractor and owner of a construction firm. On March 28, 2019, he announced his campaign to run for the Democratic nomination for President of the United States in the 2020 United States presidential election.",
-      current_position: "Mayor",
-      state: "Florida",
-      website: "https://wayneforusa.com/",
-      twitter: "https://twitter.com/WayneMessam",
-      logo: "https://wayneforusa.com/wp-content/uploads/2019/03/w4a-161w@2x.png",
-      image: "https://madison365.com/wp-content/uploads/2019/03/Mayor_Messam.jpg",
-      born: "South Bay, Florida")
+  Candidate.create(
+    name: "Wayne Messam",
+    age: 45,
+    bio: "Wayne Martin Messam (born June 7, 1974) is an American businessman and politician serving as the mayor of Miramar, Florida, a position he has held since 2015. A member of the Democratic Party, he was first elected to the Miramar City Commission in 2011 before defeating incumbent mayor Lori Cohen Moseley in the 2015 election. Messam is also a general contractor and owner of a construction firm. On March 28, 2019, he announced his campaign to run for the Democratic nomination for President of the United States in the 2020 United States presidential election.",
+    current_position: "Mayor",
+    state: "Florida",
+    website: "https://wayneforusa.com/",
+    twitter: "https://twitter.com/WayneMessam",
+    logo: "https://wayneforusa.com/wp-content/uploads/2019/03/w4a-161w@2x.png",
+    image: "https://madison365.com/wp-content/uploads/2019/03/Mayor_Messam.jpg",
+    born: "South Bay, Florida")
 
-    Candidate.create(
-      name: "Tom Steyer",
-      age: 62,
-      bio: "Thomas Fahr Steyer (born June 27, 1957) is an American billionaire hedge fundmanager, philanthropist, environmentalist, liberal activist, and fundraiser. He is a candidate in the 2020 Democratic Party presidential primaries.",
-      current_position: "Hedge Fund Manager",
-      state: "California",
-      website: "https://www.tomsteyer.com/",
-      twitter: "https://twitter.com/TomSteyer",
-      logo: "https://www.tomsteyer.com/wp-content/themes/timber/dist/img/ts2020-logo-w.svg",
-      image: "https://image.cnbcfm.com/api/v1/image/106014577-1562872406443tom-steyer-portrait-a.jpg?v=1562872521&w=1400&h=950",
-      born: "Manhattan, New York")
+  Candidate.create(
+    name: "Tom Steyer",
+    age: 62,
+    bio: "Thomas Fahr Steyer (born June 27, 1957) is an American billionaire hedge fundmanager, philanthropist, environmentalist, liberal activist, and fundraiser. He is a candidate in the 2020 Democratic Party presidential primaries.",
+    current_position: "Hedge Fund Manager",
+    state: "California",
+    website: "https://www.tomsteyer.com/",
+    twitter: "https://twitter.com/TomSteyer",
+    logo: "https://www.tomsteyer.com/wp-content/themes/timber/dist/img/ts2020-logo-w.svg",
+    image: "https://image.cnbcfm.com/api/v1/image/106014577-1562872406443tom-steyer-portrait-a.jpg?v=1562872521&w=1400&h=950",
+    born: "Manhattan, New York")
 
-    Candidate.create(
-      name: "Andrew Yang",
-      age: 44,
-      bio: "Andrew Yang (born January 13, 1975) is an American 2020 Democratic presidential candidate, entrepreneur, lawyer, and philanthropist. He is the founder of Venture for America (VFA), a nonprofit that focuses on creating jobs in struggling American cities. Yang worked in various startups and early stage growth companies as a founder or executive from 2000 to 2009. After he founded VFA in 2011, the Obama administration selected him in 2012 as a 'Champion of Change' and in 2015 as a 'Presidential Ambassador for Global Entrepreneurship'. Yang is the author of the 2014 book Smart People Should Build Things and the 2018 book The War on Normal People.",
-      current_position: "Entrepreneur",
-      state: "New York",
-      website: "https://www.yang2020.com/",
-      twitter: "https://twitter.com/AndrewYang",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Andrew_Yang_2020_logo.png",
-      image: "https://miro.medium.com/max/1200/1*LVh6dFQRV74sFXRO1ZLacQ.png",
-      born: "Schenectady, New York")
+  Candidate.create(
+    name: "Andrew Yang",
+    age: 44,
+    bio: "Andrew Yang (born January 13, 1975) is an American 2020 Democratic presidential candidate, entrepreneur, lawyer, and philanthropist. He is the founder of Venture for America (VFA), a nonprofit that focuses on creating jobs in struggling American cities. Yang worked in various startups and early stage growth companies as a founder or executive from 2000 to 2009. After he founded VFA in 2011, the Obama administration selected him in 2012 as a 'Champion of Change' and in 2015 as a 'Presidential Ambassador for Global Entrepreneurship'. Yang is the author of the 2014 book Smart People Should Build Things and the 2018 book The War on Normal People.",
+    current_position: "Entrepreneur",
+    state: "New York",
+    website: "https://www.yang2020.com/",
+    twitter: "https://twitter.com/AndrewYang",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Andrew_Yang_2020_logo.png",
+    image: "https://miro.medium.com/max/1200/1*LVh6dFQRV74sFXRO1ZLacQ.png",
+    born: "Schenectady, New York")
 
-    Candidate.create(
-      name: "Bernie Sanders",
-      age: 77,
-      bio: "Bernard Sanders (born September 8, 1941) is an American politician who has served as the junior United States Senator from Vermont since 2007. Vermont's at-large Congressman from 1991 to 2007, he is the longest serving independent in U.S. congressional history and a member of the Democratic caucus. Sanders ran unsuccessfully for the 2016 Democratic nomination for president and is running again in 2020. A self-described democratic socialist and progressive, Sanders is known for his opposition to economic inequality. On domestic policy, he broadly supports labor rights, and has supported universal and single-payer healthcare, paid parental leave, and tuition-free tertiary education. On foreign policy, he broadly supports reducing military spending, pursuing more diplomacy and international cooperation, and putting greater emphasis on labor rights and environmental concerns when negotiating international trade agreements.",
-      current_position: "U.S. Senator",
-      state: "Vermont",
-      website: "https://berniesanders.com/",
-      twitter: "https://twitter.com/BernieSanders",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Bernie_Sanders_2020_logo.svg/1280px-Bernie_Sanders_2020_logo.svg.png",
-      image: "https://upload.wikimedia.org/wikipedia/commons/d/de/Bernie_Sanders.jpg",
-      born: "Brooklyn, New York")
+  Candidate.create(
+    name: "Bernie Sanders",
+    age: 77,
+    bio: "Bernard Sanders (born September 8, 1941) is an American politician who has served as the junior United States Senator from Vermont since 2007. Vermont's at-large Congressman from 1991 to 2007, he is the longest serving independent in U.S. congressional history and a member of the Democratic caucus. Sanders ran unsuccessfully for the 2016 Democratic nomination for president and is running again in 2020. A self-described democratic socialist and progressive, Sanders is known for his opposition to economic inequality. On domestic policy, he broadly supports labor rights, and has supported universal and single-payer healthcare, paid parental leave, and tuition-free tertiary education. On foreign policy, he broadly supports reducing military spending, pursuing more diplomacy and international cooperation, and putting greater emphasis on labor rights and environmental concerns when negotiating international trade agreements.",
+    current_position: "U.S. Senator",
+    state: "Vermont",
+    website: "https://berniesanders.com/",
+    twitter: "https://twitter.com/BernieSanders",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Bernie_Sanders_2020_logo.svg/1280px-Bernie_Sanders_2020_logo.svg.png",
+    image: "https://upload.wikimedia.org/wikipedia/commons/d/de/Bernie_Sanders.jpg",
+    born: "Brooklyn, New York")
 
-    Candidate.create(
-      name: "Elizabeth Warren",
-      age: 70,
-      bio: "Elizabeth Ann Warren (born June 22, 1949) is an American Democratic politician and former academic serving as the senior United States Senator from Massachusetts since 2013. Warren was formerly a law school professor specializing in bankruptcy law. A progressive, she has focused on consumer protection, economic opportunity, and the social safety net while in the Senate.",
-      current_position: "U.S. Senator",
-      state: "Massachusetts",
-      website: "https://elizabethwarren.com/",
-      twitter: "https://twitter.com/ewarren",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Elizabeth_Warren_2020_presidential_campaign_logo.svg/1280px-Elizabeth_Warren_2020_presidential_campaign_logo.svg.png",
-      image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Elizabeth_Warren%2C_official_portrait%2C_114th_Congress.jpg",
-      born: "Oklahoma City, Oklahoma")
+  Candidate.create(
+    name: "Elizabeth Warren",
+    age: 70,
+    bio: "Elizabeth Ann Warren (born June 22, 1949) is an American Democratic politician and former academic serving as the senior United States Senator from Massachusetts since 2013. Warren was formerly a law school professor specializing in bankruptcy law. A progressive, she has focused on consumer protection, economic opportunity, and the social safety net while in the Senate.",
+    current_position: "U.S. Senator",
+    state: "Massachusetts",
+    website: "https://elizabethwarren.com/",
+    twitter: "https://twitter.com/ewarren",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Elizabeth_Warren_2020_presidential_campaign_logo.svg/1280px-Elizabeth_Warren_2020_presidential_campaign_logo.svg.png",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Elizabeth_Warren%2C_official_portrait%2C_114th_Congress.jpg",
+    born: "Oklahoma City, Oklahoma")
 
-    Candidate.create(
-      name: "Cory Booker",
-      age: 50,
-      bio: "Cory Anthony Booker (born April 27, 1969) is an American politician serving as the junior United States Senator from New Jersey since 2013 and a member of the Democratic Party. The first African-American U.S. Senator from New Jersey, he was previously the 36th Mayor of Newark from 2006 to 2013. Before that, Booker served on the Municipal Council of Newark for the Central Ward from 1998 to 2002. On February 1, 2019, he announced his campaign to run for the Democratic nomination for President of the United States in the 2020 United States presidential election.",
-      current_position: "U.S. Senator",
-      state: "New Jersey",
-      website: "https://corybooker.com/",
-      twitter: "https://twitter.com/CoryBooker",
-      logo: "https://corybooker.com/wp-content/themes/bookerstrap/images/Cory-Logo.svg",
-      image: "https://www.praise945.com/wp-content/uploads/2016/02/Mayor-Cory-Booker.jpg",
-      born: "Washington, D.C.")
+  Candidate.create(
+    name: "Cory Booker",
+    age: 50,
+    bio: "Cory Anthony Booker (born April 27, 1969) is an American politician serving as the junior United States Senator from New Jersey since 2013 and a member of the Democratic Party. The first African-American U.S. Senator from New Jersey, he was previously the 36th Mayor of Newark from 2006 to 2013. Before that, Booker served on the Municipal Council of Newark for the Central Ward from 1998 to 2002. On February 1, 2019, he announced his campaign to run for the Democratic nomination for President of the United States in the 2020 United States presidential election.",
+    current_position: "U.S. Senator",
+    state: "New Jersey",
+    website: "https://corybooker.com/",
+    twitter: "https://twitter.com/CoryBooker",
+    logo: "https://corybooker.com/wp-content/themes/bookerstrap/images/Cory-Logo.svg",
+    image: "https://www.praise945.com/wp-content/uploads/2016/02/Mayor-Cory-Booker.jpg",
+    born: "Washington, D.C.")
 
-    Candidate.create(
-      name: "Kamala Harris",
-      age: 54,
-      bio: "Kamala Devi Harris (born October 20, 1964) is an American lawyer and politician serving as the junior United States Senator from California since 2017. A member of the Democratic Party, she previously served as the 27th District Attorney of San Francisco from 2004 to 2011 and 32nd Attorney General of California from 2011 until 2017. She is a candidate for the Democratic nomination for President of the United States in the 2020 election.",
-      current_position: "U.S. Senator",
-      state: "California",
-      website: "https://kamalaharris.org/",
-      twitter: "https://twitter.com/KamalaHarris",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Kamala_Harris_2020_presidential_campaign_logo.svg/1200px-Kamala_Harris_2020_presidential_campaign_logo.svg.png",
-      image: "https://images-na.ssl-images-amazon.com/images/I/61q8syRNTDL._SY679_.jpg",
-      born: "Oakland, California")
+  Candidate.create(
+    name: "Kamala Harris",
+    age: 54,
+    bio: "Kamala Devi Harris (born October 20, 1964) is an American lawyer and politician serving as the junior United States Senator from California since 2017. A member of the Democratic Party, she previously served as the 27th District Attorney of San Francisco from 2004 to 2011 and 32nd Attorney General of California from 2011 until 2017. She is a candidate for the Democratic nomination for President of the United States in the 2020 election.",
+    current_position: "U.S. Senator",
+    state: "California",
+    website: "https://kamalaharris.org/",
+    twitter: "https://twitter.com/KamalaHarris",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Kamala_Harris_2020_presidential_campaign_logo.svg/1200px-Kamala_Harris_2020_presidential_campaign_logo.svg.png",
+    image: "https://images-na.ssl-images-amazon.com/images/I/61q8syRNTDL._SY679_.jpg",
+    born: "Oakland, California")
