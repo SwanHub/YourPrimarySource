@@ -14,10 +14,19 @@ require 'csv'
 # policy1 = Policy.create(title: "Healthcare", description: "")
 # CandidatePolicy.create(candidate_id: 25, policy_id: policy1[:id])
 
+# INSERTING FINANCIALS FOR EACH CANDIDATE.
 
 # require 'csv'
 #
-# csv = CSV.read("polling.csv")
+# csv = CSV.read("finance.csv")
+#
+# i = 1
+# 21.times do
+#     candidate = Candidate.find(csv[i][0])
+#     candidate.update(total_receipts: csv[i][1], total_disbursements: csv[i][2], cash_on_hand: csv[i][3])
+#     i += 1
+# end
+
 #
 # sources = csv.map{|row| row[0]}
 # dates = csv.map{|row| row[1]}
@@ -34,16 +43,6 @@ require 'csv'
 # candidate_array.each do |poll|
 #   Poll.create(value: poll[:value], date: poll[:date], source: poll[:source], candidate_id: 24)
 # end
-
-Policy.destroy_all
-
-CSV.foreach(Rails.root.join('./policies.csv'), headers: false) do |row|
-  Policy.create({
-    title: row[1],
-    description: row[2]
-    })
-  end
-
 
 
 Candidate.create(

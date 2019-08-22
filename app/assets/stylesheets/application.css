@@ -70,7 +70,7 @@
  }
 
  .nav_bar .nav-list {
-   margin-left: 100px;
+   margin-left: 60px;
    margin-right: 100px;
  }
 
@@ -141,13 +141,19 @@
 
 .candidate_basics {
   border: 1px solid rgba(21, 21, 21, 0.1);
+  border-radius: 10px;
   width: 30%;
   height: 600px;
   overflow: auto
 }
 
+.candidate_basics img {
+    border-radius: 10px;
+}
+
 .candidate_policies {
   border: 1px solid rgba(21, 21, 21, 0.1);
+  border-radius: 10px;
   width: 30%;
   height: 600px;
   overflow: auto
@@ -155,6 +161,7 @@
 
 .candidate_articles {
   border: 1px solid rgba(21, 21, 21, 0.1);
+  border-radius: 10px;
   width: 30%;
   height: 600px;
   overflow: auto
@@ -302,4 +309,16 @@ div.double_bottom_border {
 
 .profile_name {
   margin-top: 0px;
+}
+
+.policy_image {
+  height: 150px;
+}
+
+.policy_card {
+  display: flex;
+}
+
+.policy_item {
+  justify-content: flex-start;
 }

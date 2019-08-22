@@ -19,6 +19,7 @@
             <% if current_user %>
                 <p class="nav_item"><%= link_to "My Profile", user_path(current_user)%></p>
                 <p class="nav_item"><%= link_to "Candidates", candidates_path%></p>
+                <p class="nav_item"><%= link_to "Policies", policies_path%></p>
                 <p class="nav_item"><%= link_to "Register to Vote", register_path %></p>
                 <p class="nav_item"><%= link_to "Log Out", logout_path%></p>
             <% else %>

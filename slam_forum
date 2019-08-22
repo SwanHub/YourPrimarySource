@@ -110,12 +110,13 @@ Questions:::
       [x]Seed polling data
       [x]Voter Registration
       [x]Add three columns to each candidate
+      [x]Get Luke the data.
+      [x]Get financial data into the database.
       picture links to fec.gov financial summary.
-      Get Luke the data.
 
 6. Style
       [x]Refresh button styling
-      Finish User-side styling (tonight)
+      Finish User-side styling
       Create charts for polling data
       Create charts based on group financial data.
 

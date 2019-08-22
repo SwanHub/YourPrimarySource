@@ -1,7 +1,9 @@
 class PoliciesController < ApplicationController
 
   def index
-      @policies = Policy.all
+      if params[:policy]
+        @policies = Policy.all.select{|policy| policy.title == params[:policy][:policy_name]}
+      end
   end
 
   def show
