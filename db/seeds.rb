@@ -1,3 +1,4 @@
+require 'csv'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -33,6 +34,17 @@
 # candidate_array.each do |poll|
 #   Poll.create(value: poll[:value], date: poll[:date], source: poll[:source], candidate_id: 24)
 # end
+
+Policy.destroy_all
+
+CSV.foreach(Rails.root.join('./policies.csv'), headers: false) do |row|
+  Policy.create({
+    title: row[1],
+    description: row[2]
+    })
+  end
+
+
 
 Candidate.create(
   name: "Tulsi Gabbard",
