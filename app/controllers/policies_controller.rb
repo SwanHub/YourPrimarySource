@@ -3,14 +3,24 @@ class PoliciesController < ApplicationController
   def index
       @candidates = Candidate.all
 
-      byebug
+       # both name and policy input, go to correct policy page.
+       if params[:policy]
+         if params[:policy][:candidate_id] != "" && params[:policy][:policy_name] != ""
+              @candidate = Candidate.find(params[:policy][:candidate_id])
+              policy = @candidate.policies.find{|policy| policy.title == params[:policy][:policy_name] }
+              redirect_to policy_path(policy)
 
-       # if there is a value for person and policy, go to that candidate's policy.
-       # if not, render either the person's policies or all candidate policies under this title.
+          # no name input... get all policies of this title/category.
+          elsif params[:policy][:candidate_id] == "" && params[:policy][:policy_name] != ""
+              @policies = Policy.all.select{|policy| policy.title == params[:policy][:policy_name]}
 
-      if params[:policy]
-        @policies = Policy.all.select{|policy| policy.title == params[:policy][:policy_name]}
+          # no policy input... get all policies of this person. Needs its own view???
+          elsif params[:policy][:candidate_id] != "" && params[:policy][:policy_name] == ""
+              candidate = Candidate.find(params[:policy][:candidate_id])
+              @policies = candidate.policies
+          end
       end
+
   end
 
   def show
