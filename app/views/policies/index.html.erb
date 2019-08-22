@@ -1,7 +1,37 @@
-<h1>All Policies</h1>
+<form action="/policies" method="get">
+  <select class="policy_dropdown" name="policy[policy_name]" id="policy_name">
+    <option>Healthcare</option>
+    <option>Immigration</option>
+    <option>The Climate Crisis</option>
+    <option>Education</option>
+    <option>Reproductive Rights</option>
+    <option>Government Reform and Anti-Corruption</option>
+    <option>Poverty and Inequality</option>
+    <option>Voting Rights</option>
+    <option>Criminal Justice Reform</option>
+    <option>Taxes and Economics</option>
+    <option>Foreign Policy</option>
+    <option>Guns</option>
+    <option>Reparations</option>
+    <option>Identity and Social Justice</option>
+    <option>Housing</option>
+    <option>Family Issues</option>
+    <option>Business and Teach Regulation</option>
+  </select>
+  <input type="submit" name="commit" value="Get the policy">
+</form>
 
 <% @policies.each do |policy|%>
+  <div class="policy_card">
 
-  <p><%= link_to policy.title, policy_path(policy)%></p>
-  <p>Description: <%= policy.description%></p>
+    <div class="policy_item">
+      <p><%= link_to policy.candidates.first.name, candidate_path(policy.candidates.first)%></p>
+      <img class="policy_image" src="<%=policy.candidates.first.image%>" alt="<%=policy.candidates.first.name%>">
+    </div>
+
+    <div class="policy_item">
+      <p>Description: <%= policy.description%></p>
+    </div>
+
+  </div>
 <% end%>
