@@ -55,16 +55,6 @@ User
 
 MAY NEED to create these new tables, not too difficult to implement:
 
-Articles
-  Generated with API calls to NewsApi.org.
-      "See recent articles" button, to controller for articles, creates new
-      api request with "candidates_name" in the url search. That basic
-      information then added to articles table, and presented in the candidate
-      show page.
-
-Tags
-  self explanatory.
-
 Stretch:::
   Deployment
   Connect a user to their local representative, voting location, etc.
@@ -74,13 +64,7 @@ Stretch:::
   Self-join posts to respond to other posts...
   GeoLocation of posts...
 
-Questions:::
-    API that lists all candidate policies?
-    APIs in general, what can we easily gather?
-
 =================================================================
-  Day 1:: Relationships, CRUD, some basic styling.
-
 1. Have the entire database ready with data, a few fake seeds, relationships established.
 
 2. Vertical slices, one by one.
