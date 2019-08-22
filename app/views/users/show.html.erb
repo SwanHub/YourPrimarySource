@@ -1,20 +1,14 @@
-<h1><%=@user.full_name%></h1>
+<h1 class="profile_name"><%=@user.full_name%></h1>
 
-<h2>Posts</h2>
-<ul>
+<h2 class="negative_margin">Activity</h2>
+<div class="user_home_posts">
   <% @user.posts.each do |post|%>
-  <h3><%= link_to post.title, post_path(post)%></h3>
-  <p>Content: <%= post.content%></p>
-  <span>_______________________</span>
+    <div class="double_bottom_border">
+      <h3><%=post.created_at.to_date%> :: <%= link_to post.title, post_path(post)%></h3>
+      <p class="bit_o_left_margin emphasis"><%=post.content%></p>
+      <p class="bit_o_left_margin de-emphasis"><%=post.class%> on
+        <%= link_to post.policy.candidates.first.name, candidate_path(post.policy.candidates.first)%>'s
+        <%=link_to post.policy.title, policies_path%> Policy</p>
+    </div>
   <% end %>
-</ul>
-
-<h2>Policies</h2>
-<ul>
-  <% @user.policies.each do |policy|%>
-      <h3><%= link_to policy.title, policy_path(policy)%></h3>
-      <p>Description: <%= policy.description%></p>
-      <p>Category: <%= policy.category%></p>
-      <span>_______________________</span>
-  <% end %>
-</ul>
+</div>

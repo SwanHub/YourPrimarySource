@@ -3,7 +3,6 @@ class ArticlesController < ApplicationController
   def create
       @candidate = Candidate.find(params[:candidate][:id])
       five_articles = Article.get_five_recent_for(@candidate.urlify)
-      byebug
       five_articles.each do |article|
           Article.create(title: article["title"],
                               description: article["description"],

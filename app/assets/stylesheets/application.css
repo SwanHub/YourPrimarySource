@@ -136,7 +136,7 @@
 }
 
 .candidate_title {
-  margin-top: 0px;
+  margin-top: -50px;
 }
 
 .candidate_basics {
@@ -162,6 +162,7 @@
 
 .text-justify {
   text-align: justify;
+  text-align-last: center;
   margin: 20px;
 }
 
@@ -173,7 +174,7 @@
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 .fa:hover {
@@ -185,7 +186,120 @@
   color: white;
 }
 
-/* POLICY! */
+/* POLICY */
 .policy_header {
   width: 75%;
+  margin: auto;
+  margin-top: -30px;
+  border: 1px dashed rgba(21, 21, 21, 0.1);
+}
+
+.policy_thread {
+  width: 75%;
+  text-align: justify;
+  margin: auto;
+}
+
+/* Candidate show page refresh button */
+.reload {
+  background-color: none;
+}
+
+.reload svg{
+  width: 20px;
+  height: 20px;
+  fill: rgba(85, 172, 238, 0.5);
+}
+
+.reload svg:hover {
+  width: 20px;
+  height: 20px;
+  fill: rgba(85, 172, 238, 0.8);
+  cursor: pointer;
+}
+
+form#new_article.new_article button {
+  background-color: transparent;
+  border: none;
+}
+
+form#new_article.new_article button:focus {
+  outline: 0;
+}
+
+.animate {
+  margin-top: -50px;
+  background-color: none;
+  border: none;
+  color: black;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.animate span {
+  margin-top: -50px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.animate span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  color: rgb(42, 0, 192);
+}
+
+.animate:hover span {
+  padding-right: 25px;
+}
+
+.animate:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+h1#candidate_name {
+  margin: 0px 0px;
+}
+
+/* USER HOME PAGE */
+div.user_home_posts {
+  width: 50%;
+  text-align: justify;
+  margin: auto;
+}
+
+div.double_bottom_border {
+  border-bottom-style: double;
+  border-bottom-color: rgba(21, 21, 21, 0.1);
+}
+
+.bit_o_left_margin {
+  margin-left: 70px;
+}
+
+.bit_o_left_margin {
+  margin-right: 70px;
+}
+
+.emphasis {
+  font-size: 18px;
+}
+
+.de-emphasis {
+  font-size: 14px;
+}
+
+.negative_margin {
+  margin-top: -20px;
+}
+
+.profile_name {
+  margin-top: 0px;
 }

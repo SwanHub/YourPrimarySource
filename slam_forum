@@ -90,12 +90,12 @@ Questions:::
       [x]User,
       [x]Post
 
-3. auth
+3. Auth
       [x]Create sessions controller
       [x]connect sessions to application controller
       [x]Create Userscontroller related methods
 
-4. complete CRUD
+4. CRUD
       [x]Navigation links,
       [x]Create posts form
       [x]Update posts form
@@ -104,118 +104,26 @@ Questions:::
       [x]edit leads to edit form
       [x]delete leads back to policy page
 
-5. Data, Styling.
+5. Data
       [x]Policies seed
-      [x]Seed polling data
       [x]Create API to news articles related to candidates...
+      [x]Seed polling data
       [x]Voter Registration
+      [x]Add three columns to each candidate
+      picture links to fec.gov financial summary.
+
+6. Style
+      [x]Refresh button styling
+      Finish User-side styling (tonight)
+      Create charts for polling data
+      Create charts based on group financial data.
+      Create
+
 
 ============================================================
-Current list:
-      Create charts for polling data
-      Add three columns to each candidate == picture links to fec.gov financial summary.
-      Create charts based on group financial data.
-      Finish User-side styling
-      Refresh styling
-      =====================================================
 Stretch:
-      Posts responding to posts.
+      Posts responding to posts. (potentially tonight)
       Deploy to Heroku
       Post geolocation
+      OmniAuth?
 ===========================================================
-
-gem 'bcrypt' uncomment in gemfile and run bundle...
-      /gem 'OmniAuth' —> to add auth from providers
-      /gem 'devise' —> for complicated auth needs
-      /gem 'CanCanCan' —> for handling authorization
-      /gem 'pundit' —> complicated permissions models
-Rails.application.routes.draw do
-    root 'users#welcome'
-    get '/login' => 'sessions#new'
-    post '/login' => 'sessions#create'
-    post '/logout' => 'sessions#destroy'
-    resources :users, only: [:new, :create]
-
-end
-
-class ApplicationController < ActionController::Base
-protect_from_forgery with: :exception
-before_action :current_user
-
-    def current_user
-        @user = (User.find_by(id: session[:user_id]) || User.new)
-    end
-
-    def logged_in?
-        current_user.id != nil
-    end
-
-    def require_logged_in
-        if logged_in?
-        else
-            redirect_to(
-                controller: 'sessions',
-                action: 'new'
-            )
-        end
-    end
-end
-
-class UsersController < ApplicationController
-———> in schema t.string "password_digest"
-———> in model "has_secure_password"
-    def new
-    end
-
-    def create
-        @user = User.create(user_params)
-        if @user.save
-            session[:user_id] = @user.id
-            redirect_to(
-                controller: 'users',
-                action: 'welcome'
-            )
-        else
-            redirect_to(
-                controller: 'users',
-                action: 'new'
-            )
-        end
-    end
-
-    def welcome
-        require_logged_in —> or welcome_controller validates with before_action
-        @user = User.find_by(id: session[:user_id]) —> users/views/welcome
-    end
-
-private
-
-    def user_params
-        params.require(:user).permit(:name, :password, :password_confirmation)
-    end
-end
-
-class SessionsController < ApplicationController
-    def new
-    end
-
-    def create
-        user = User.find_by(name: params[:user][:name])
-        user = user.try(:authenticate, params[:user][:password]) #allows for redirection if user does not exist
-        if user
-            session[:user_id] = user.id
-            @user = user
-            redirect_to(controller: 'users', action: 'welcome')
-        else
-            redirect_to(controller: 'sessions', action: 'new')
-        end
-    end
-
-    def destroy     ———————------—>  <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
-                                          <input type=submit value='logout'>
-                                      <% end %>
-
-        session.delete :user_id
-        redirect_to '/'
-    end
-end
