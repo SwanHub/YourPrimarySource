@@ -17,4 +17,8 @@ Rails.application.routes.draw do
 
   resources :polls, only: [:index, :show]
 
+  #only create is necessary for comments route. Creating new posts.
+  resources :comments, only: [:new, :create]
+
+
 end

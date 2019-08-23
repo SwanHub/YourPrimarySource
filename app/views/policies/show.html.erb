@@ -17,6 +17,14 @@
   <h3><% @policy.posts.reverse.each do |post|%></h3>
     <p><%=post.created_at.to_date%> :: <%= link_to post.user.full_name, user_path(post.user)%> :: <%= link_to post.title, post_path(post) %></p>
     <p class="bit_o_left_margin bit_o_right_margin"><%= post.content%></p><br>
+
+    <%= form_tag("/comments/new", method: "get") do %>
+      <input type="hidden" name="post[id]" value="<%=post.id%>">
+      <button class="inputbutton" type="submit">
+        Create Comment
+      </button>
+    <% end %>
+
   <% end %>
 </div>
 

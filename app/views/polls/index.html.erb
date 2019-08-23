@@ -8,3 +8,19 @@
   </select><br>
   <input class="policy_search" type="submit" name="commit" value="Search">
 </form>
+
+<% if @poll_sources %>
+   <% @poll_sources.each do |source|%>
+    <div class="policy_card">
+
+      <div class="policy_item">
+        <p><%= link_to policy.candidates.first.name, candidate_path(policy.candidates.first)%></p>
+        <img class="policy_image" src="<%=policy.candidates.first.image%>" alt="<%=policy.candidates.first.name%>">
+      </div>
+
+      <div class="policy_item">
+        <p class="description"><%= policy.description%></p>
+      </div>
+    </div>
+  <% end%>
+<% end %>
