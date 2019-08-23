@@ -280,6 +280,8 @@ div.user_home_posts {
   width: 50%;
   text-align: justify;
   margin: auto;
+  max-height: 1000px;
+  overflow: auto;
 }
 
 div.double_bottom_border {
@@ -317,8 +319,29 @@ div.double_bottom_border {
 
 .policy_card {
   display: flex;
-  width: 30%;
+  width: 40%;
   margin: auto;
+}
+
+select.policy_dropdown {
+  border: 1px solid rgba(153, 204, 255, 0.7);
+  font-size: 14px;
+  text-align: center;
+  margin: 10px;
+  background-color:rgba(153, 204, 255, 0.2);
+}
+
+.policy_search {
+  padding: 8px;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  color: rgba(12, 105, 235, 0.5);
+}
+
+.policy_search:hover {
+  background-color:rgba(153, 204, 255, 0.2);
+  color: black;
 }
 
 .policy_item {
@@ -330,4 +353,8 @@ div.double_bottom_border {
 .description {
   margin-top: 50px;
   margin-left: 10px;
+}
+
+.light_blue {
+  color: blue;
 }

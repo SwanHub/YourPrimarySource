@@ -27,6 +27,7 @@ require 'csv'
 #     i += 1
 # end
 
+
 # csv = CSV.read("policies3.csv")
 #
 # row = 1
