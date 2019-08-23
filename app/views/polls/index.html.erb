@@ -1,0 +1,10 @@
+<form action="/polls" method="get">
+  <select class="policy_dropdown" name="policy[candidate_id]" id="candidate_id">
+    <option selected disabled>Candidate</option>
+    <%=@candidates.each do |candidate|%>
+      <option value="<%=candidate.id%>"><%=candidate.name%></option>
+    <% end%>
+    <option></option>
+  </select><br>
+  <input class="policy_search" type="submit" name="commit" value="Search">
+</form>

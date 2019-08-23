@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   resources :articles, only: [:create]
 
+  resources :polls, only: [:index, :show]
+
 end

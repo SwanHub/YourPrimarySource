@@ -139,4 +139,24 @@ class Candidate < ApplicationRecord
   def self.poll_spread
     self.most_recent_poll_value - self.oldest_poll_value
   end
+
+  def candidate_poll_values
+    self.polls.map do |poll|
+      poll.value
+    end
+  end
+
+  def candidate_poll_sources
+    self.polls.map do |poll|
+      poll.source
+    end
+  end
+
+  def candidate_poll_dates
+    self.polls.map do |poll|
+      poll.date
+    end
+  end
+
+
  end
