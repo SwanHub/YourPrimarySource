@@ -1,9 +1,24 @@
-<%= form_for(@post) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<div class="policy_header">
+  <h1><%=@policy.title%></h1>
+  <h2 class="negative_margin"><% @policy.candidates.each do |candidate|%>
+    <%= link_to candidate.name, candidate_path(candidate)%>
+    <% end %></h2>
+  <h3 class="text-justify"><%=@policy.description%></h3>
+  <form action="/policies" method="get">
+    <button class="policy_search" type="submit" name="button">
+      <input type="hidden" name="policy[policy_name]" value="<%=@policy.title%>">
+      <input type="hidden" name="policy[candidate_id]" value="All Candidates">
+      <%= "Other #{@policy.title} Policies"%>
+    </button>
+  </form>
+</div>
 
-  <%= f.label :content %>
-  <%= f.text_area :content %>
+<%= form_for(@post) do |f| %>
+  <%= f.label :title %><br>
+  <input class="new_form_title" type="text" name="post[title]" id="post_title"><br>
+
+  <%= f.label :content %><br>
+  <textarea class="new_form_content" name="post[content]" id="post_content" rows="3"></textarea><br>
 
   <input type="hidden" name="policy[id]" value="<%=@policy.id%>">
 

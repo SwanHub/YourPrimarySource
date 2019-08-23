@@ -52,7 +52,7 @@
             </button>
 
           <% end %>
-            <% @candidate.articles.each do |article|%>
+            <% @candidate.articles_date_sorted.each do |article|%>
                 <h3><a target="_blank" href="<%=article.url%>"><%=article.title%></a></h3>
                 <p class="text-justify"><%= article.description%></p>
                 <p><%= article.source%>: <%= article.author%></p>

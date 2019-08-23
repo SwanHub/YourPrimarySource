@@ -12,4 +12,16 @@ class Post < ApplicationRecord
       !Comment.find_by(commenter_id: self.id)
   end
 
+  def post_or_comment
+      if self.post?
+          "Post"
+      else 
+          "Comment"
+      end
+  end
+
+  def post?
+      !!Comment.all.find{|comment| comment.poster_id == self.id}
+  end
+
 end

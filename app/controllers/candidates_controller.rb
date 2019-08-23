@@ -1,8 +1,7 @@
 class CandidatesController < ApplicationController
 
   def index
-      @candidates = Candidate.all
-
+      @candidates = Candidate.home_page_sort
       respond_to do |format|
         format.html
         format.csv {send_data @candidates.to_csv, filename: "users-#{Date.today}.csv" }

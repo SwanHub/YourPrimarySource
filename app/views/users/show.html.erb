@@ -1,14 +1,25 @@
 <h1 class="profile_name"><%=@user.full_name%></h1>
 
 <h2 class="negative_margin">Activity</h2>
+
 <div class="user_home_posts">
   <% @user.posts.each do |post|%>
     <div class="double_bottom_border">
-      <h3><%=post.created_at.to_date%> :: <%= link_to post.title, post_path(post)%></h3>
-      <p class="bit_o_left_margin emphasis"><%=post.content%></p>
-      <p class="bit_o_left_margin de-emphasis"><%=post.class%> on
-        <%= link_to post.policy.candidates.first.name, candidate_path(post.policy.candidates.first)%>'s
-        <%=link_to post.policy.title, policies_path%> Policy</p>
+      <% if post.post_or_comment == "Post"%>
+
+        <p class="red_background emphasis"><%=post.created_at.to_date%> :: <%= link_to post.title, post_path(post)%> :: <%=post.content%></p>
+        <p class="bit_o_left_margin de-emphasis"><%=post.post_or_comment%> on
+          <%= link_to post.policy.candidates.first.name, candidate_path(post.policy.candidates.first)%>'s
+          <%=link_to post.policy.title, policies_path%> Policy</p>
+
+      <% else %>
+
+        <p class="blue_background emphasis"><%=post.created_at.to_date%> :: <%= link_to post.title, post_path(post)%> :: <%=post.content%></p>
+        <p class="bit_o_left_margin de-emphasis"><%=post.post_or_comment%> on
+          <%= link_to post.policy.candidates.first.name, candidate_path(post.policy.candidates.first)%>'s
+          <%=link_to post.policy.title, policies_path%> Policy</p>
+
+      <% end %>
     </div>
   <% end %>
 </div>

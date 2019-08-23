@@ -3,7 +3,7 @@ class PoliciesController < ApplicationController
   def index
       @candidates = Candidate.all
        # both name and policy input, go to correct policy page.
-       if params[:policy]
+       if !!params[:policy]
          if params[:policy][:candidate_id] != "All Candidates" && params[:policy][:policy_name] != "All Policies"
               @candidate = Candidate.find(params[:policy][:candidate_id])
               policy = @candidate.policies.find{|policy| policy.title == params[:policy][:policy_name] }

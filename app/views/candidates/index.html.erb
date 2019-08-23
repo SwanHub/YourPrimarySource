@@ -7,7 +7,7 @@
               <%if candidate.in_race %>
                 <p><%=candidate.name%></p>
               <% else %>
-                <p><%=candidate.name%> <span class="out_of_race_text">(Dropped out)</span></p>
+                <p><span class="line_through"><%=candidate.name%></span> <span class="out_of_race_text">(Dropped out)</span></p>
               <% end %>
             </div>
           </div>

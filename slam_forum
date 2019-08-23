@@ -101,7 +101,7 @@ Stretch:::
 
 6. Style
       [x]Refresh button styling
-      Finish User-side styling
+      [x]Finish User-side styling
 
       Create charts for polling data
       Create charts based on group financial data.
@@ -112,20 +112,26 @@ Stretch:::
 8. Miscellaneous
       [x]Add policies for Cory booker.
       [x]Include "All" in dropdown.
+      [x]did they drop out? (style="text-decoration:line-through;")
+      [x]Change sort on articles to by date / time. See most recent first.
+      [x]change "Post" to "Comment" where applicable on user page.
+      [x]sort pages by polling numbers (cash_on_hand)
+
+      Fix post routing.
+      Styling the new post page itself.
+
       Include Policy Title in policy description on policies index.
-      sort pages by polling numbers
-      change "Post" to "Comment" where applicable on user page.
-      Change sort on articles to by date / time. See most recent first.
+
       Change formatting if only a candidate shows on policy search.
       Change formatting on candidate picture etc. for policy page. frumpy.
           make pictures correct size as well.
-      Edit & delete buttons on the policy show page.
-      edit  + new pages style for comments/posts
+
       Change dates to actual dates? (relevant to many pages)
       Adjust margins for article feed in candidate show page.
 
-      did they drop out? (style="text-decoration:line-through;")
-
+9. Dressing
+      README.md
+      Demo Video
 ============================================================
 Stretch:
       [x]Posts responding to posts. (potentially tonight)

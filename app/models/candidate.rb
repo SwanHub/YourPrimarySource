@@ -8,6 +8,22 @@ class Candidate < ApplicationRecord
       self.name.split(" ").join("+")
   end
 
+##______________________________##
+
+  def articles_date_sorted
+      self.articles.sort_by{|article| article.publish_date}.reverse
+  end
+
+  def self.home_page_sort
+      # get all candidates with non-nil cash_on_hand
+      have_cash = self.all.select{|candidate| candidate.cash_on_hand != nil}
+      # get all candidates with nil cash_on_hand
+      no_cash = self.all.select{|candidate| candidate.cash_on_hand == nil}
+      #order based on cash_on_hand, then add those with no cash.
+      cash_ordered = have_cash.sort_by{|candidate| candidate.cash_on_hand}.reverse
+      cash_ordered + no_cash
+  end
+
   def poll_date
     @dates = []
     self.polls.each do |poll|
@@ -86,6 +102,10 @@ class Candidate < ApplicationRecord
 
   def self.no_nil_cash_on_hand
       self.all_cash_on_hand.select{|cash| cash != nil}
+  end
+
+  def self.nil_cash_on_hand
+      self.all_cash_on_hand.select{|cash| cash == nil}
   end
 
   def self.max_cash_on_hand
