@@ -13,4 +13,5 @@ class Poll < ApplicationRecord
         end
       end
 
+
 end

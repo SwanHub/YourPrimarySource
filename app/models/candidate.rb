@@ -8,6 +8,34 @@ class Candidate < ApplicationRecord
       self.name.split(" ").join("+")
   end
 
+  def poll_date
+    @dates = []
+    self.polls.each do |poll|
+      @dates << poll[:date]
+    end
+    @dates
+  end
+
+  def poll_source
+    @sources = []
+    self.polls.each do |poll|
+      @sources << poll[:source]
+    end
+    @sources
+  end
+
+  def poll_value
+    @values = []
+    self.polls.each do |poll|
+      @values << poll[:value]
+    end
+    @values
+  end
+
+##_____________FINANCIALS METHODS_________________##
+
+##_____________Receipts_________________##
+
   def self.all_receipts
       self.all.map{|candidate| candidate.total_receipts}
   end
@@ -27,6 +55,8 @@ class Candidate < ApplicationRecord
   def self.receipts_spread
       self.max_receipts - self.min_receipts
   end
+
+##_____________Disbursements_________________##
 
   def self.all_disbursements
       self.all.map{|candidate| candidate.total_disbursements}
@@ -48,6 +78,8 @@ class Candidate < ApplicationRecord
       self.max_disbursements - self.min_disbursements
   end
 
+##_____________Cash on Hand_________________##
+
   def self.all_cash_on_hand
       self.all.map{|candidate| candidate.cash_on_hand}
   end
@@ -68,4 +100,43 @@ class Candidate < ApplicationRecord
       self.max_cash_on_hand - self.min_cash_on_hand
   end
 
-end
+##_____________POLLING METHODS_________________##
+
+  def self.candidate_polls
+      self.all.map do |candidate|
+        candidate.polls
+      end
+  end
+
+  def self.no_nil_polls
+      self.candidate_polls.select{|poll| poll != nil}
+  end
+
+  def self.poll_dates
+      self.no_nil_polls.map do |poll|
+        poll.map do |values|
+          value.date
+        end
+      end
+  end
+
+  def self.most_recent_poll
+    Poll.find(self.poll_ids.first)
+  end
+
+  def self.most_recent_poll_value
+    self.most_recent_poll.value
+  end
+
+  def self.oldest_poll
+    Poll.find(self.poll_ids.last)
+  end
+
+  def self.oldest_poll_value
+    self.oldest_poll.value
+  end
+
+  def self.poll_spread
+    self.most_recent_poll_value - self.oldest_poll_value
+  end
+ end
