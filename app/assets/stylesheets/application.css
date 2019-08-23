@@ -135,6 +135,13 @@
   justify-content: space-between;
 }
 
+.data_container {
+  margin: 30px;
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .candidate_title {
   margin-top: -50px;
 }
@@ -146,6 +153,14 @@
   height: 600px;
   overflow: auto
 }
+.poll_data {
+  border: 1px solid rgba(21, 21, 21, 0.1);
+  border-radius: 10px;
+  width: 30%;
+  height: 600px;
+  overflow: auto;
+  margin-right: 100px;
+}
 
 .candidate_basics img {
     border-radius: 10px;
@@ -156,6 +171,14 @@
   border-radius: 10px;
   width: 30%;
   height: 600px;
+  overflow: auto
+}
+
+.financial_data {
+  border: 1px solid rgba(21, 21, 21, 0.1);
+  border-radius: 10px;
+  width: 30%;
+  height: 215px;
   overflow: auto
 }
 

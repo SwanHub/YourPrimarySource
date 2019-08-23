@@ -18,14 +18,14 @@ require 'csv'
 
 # require 'csv'
 #
-csv = CSV.read("finance.csv")
-
-i = 1
-21.times do
-    candidate = Candidate.find(csv[i][0])
-    candidate.update(total_receipts: csv[i][1], total_disbursements: csv[i][2], cash_on_hand: csv[i][3])
-    i += 1
-end
+# csv = CSV.read("finance.csv")
+#
+# i = 1
+# 21.times do
+#     candidate = Candidate.find(csv[i][0])
+#     candidate.update(total_receipts: csv[i][1], total_disbursements: csv[i][2], cash_on_hand: csv[i][3])
+#     i += 1
+# end
 
 
 # csv = CSV.read("policies3.csv")
@@ -46,22 +46,22 @@ end
 # column += 1
 # end
 
-# csv = CSV.read("new_polling.csv")
-# #
-# sources = csv.map{|row| row[0]}
-# dates = csv.map{|row| row[1]}
-# candidate = csv.map{|row| row[14]}
+csv = CSV.read("new_polling.csv")
 #
-# candidate_array = []
-# i = 1
-# 106.times do
-#    candidate_array << {source: sources[i], date: dates[i], value: candidate[i]}
-#    i += 1
-# end
-#
-# candidate_array.each do |poll|
-#   Poll.create(value: poll[:value], date: poll[:date], source: poll[:source], candidate_id: 13)
-# end
+sources = csv.map{|row| row[0]}
+dates = csv.map{|row| row[1]}
+candidate = csv.map{|row| row[2]}
+
+candidate_array = []
+i = 1
+106.times do
+   candidate_array << {source: sources[i], date: dates[i], value: candidate[i]}
+   i += 1
+end
+
+candidate_array.each do |poll|
+  Poll.create(value: poll[:value], date: poll[:date], source: poll[:source], candidate_id: 27)
+end
 
 #
 # CandidatePolicy.destroy_all

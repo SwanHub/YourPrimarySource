@@ -1,26 +1,45 @@
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+      <h1 id="candidate_name">
+        <a target="_blank" class="candidate_title animate" href="<%=@candidate.website%>">
+            <span><%=@candidate.name%></span>
+        </a>
+      </h1>
+
 <form action="/polls" method="get">
-  <select class="policy_dropdown" name="policy[candidate_id]" id="candidate_id">
+  <select class="policy_dropdown" name="polls[candidate_name]" id="candidate_name">
     <option selected disabled>Candidate</option>
+    <% if @candidate_polls %>
     <%=@candidates.each do |candidate|%>
-      <option value="<%=candidate.id%>"><%=candidate.name%></option>
+        <option value="<%=candidate.id%>"><%=candidate.name%></option>
+      <% end%>
     <% end%>
     <option></option>
   </select><br>
   <input class="policy_search" type="submit" name="commit" value="Search">
 </form>
 
-<% if @poll_sources %>
-   <% @poll_sources.each do |source|%>
-    <div class="policy_card">
 
-      <div class="policy_item">
-        <p><%= link_to policy.candidates.first.name, candidate_path(policy.candidates.first)%></p>
-        <img class="policy_image" src="<%=policy.candidates.first.image%>" alt="<%=policy.candidates.first.name%>">
-      </div>
+<div class="data_container">
 
-      <div class="policy_item">
-        <p class="description"><%= policy.description%></p>
-      </div>
+    <div class="poll_data">
+      <h2>Recent Polling Percentages</h2>
+      <br>
+      <% if @candidate_polls %>
+         <% @candidate_polls.each do |poll|%>
+              <h3><span><%=poll.source%></span></h3>
+              <p><span> Date: <%=poll.date%></span></p>
+              <p><span> Polling Percentage: <%=poll.value%>%</span></p>
+          <br>
+        <% end%>
+      <% end %>
     </div>
-  <% end%>
-<% end %>
+
+
+
+  <div class="financial_data">
+    <h2><span> Financial Data </span></h2>
+    <h3><span> Total Reciepts: <%= number_to_currency(@candidate_receipts)%></span></h3>
+    <h3><span> Total Disbursements: <%= number_to_currency(@candidate_disbursements)%></span></h3>
+    <h3><span> Cash on Hand: <%= number_to_currency(@candidate_cash_on_hand)%></span></h3>
+  </div>
+</div>

@@ -12,6 +12,11 @@
         <div class="candidate_basics">
           <h2>Candidate Information</h2>
           <img style="width:200px;" src="<%=@candidate.image%>" alt="<%=@candidate.name%>">
+
+
+          <p><span><%= link_to "Polling and Financial Data", polls_path()%></span></p>
+
+
           <p><span><%=@candidate.age%> yrs</span></p>
           <p><span>Born in <%=@candidate.born%></span></p>
           <p><span><%=@candidate.current_position%> | <%=@candidate.state%></span></p>
