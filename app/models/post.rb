@@ -8,4 +8,8 @@ class Post < ApplicationRecord
   has_many :comments, foreign_key: :commenter_id, class_name: "Comment"
   has_many :posters, through: :comments
 
+  def validate_post_not_comment
+      !Comment.find_by(commenter_id: self.id)
+  end
+
 end

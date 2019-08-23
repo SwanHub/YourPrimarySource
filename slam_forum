@@ -102,14 +102,27 @@ Stretch:::
 6. Style
       [x]Refresh button styling
       Finish User-side styling
+
       Create charts for polling data
       Create charts based on group financial data.
 
 7. Methods
       [x]20 total
 
+8. Miscellaneous
+      sort pages by polling numbers
+      delete Inslees
+      change "Post" to "Comment" where applicable on user page.
+      Change sort on articles to by date / time. See most recent first.
+      Change formatting if only a candidate shows on policy search.
+      Change formatting on candidate picture etc. for policy page. frumpy.
+          make pictures correct size as well.
+      Edit & delete buttons on the policy show page.
+      Change dates to actual dates? (relevant to many pages)
+      Adjust margins for article feed in candidate show page.
+
 ============================================================
 Stretch:
-      Posts responding to posts. (potentially tonight)
+      [x]Posts responding to posts. (potentially tonight)
       Deploy to Heroku
 ============================================================

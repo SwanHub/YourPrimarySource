@@ -199,12 +199,18 @@
   margin: auto;
   margin-top: -30px;
   border: 1px dashed rgba(21, 21, 21, 0.1);
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .policy_thread {
   width: 75%;
   text-align: justify;
   margin: auto;
+}
+
+.policy_response_card {
+  justify-content: flex-start;
 }
 
 /* Candidate show page refresh button */
@@ -342,6 +348,7 @@ select.policy_dropdown {
 .policy_search:hover {
   background-color:rgba(153, 204, 255, 0.2);
   color: black;
+  cursor: pointer;
 }
 
 .policy_item {
@@ -357,4 +364,18 @@ select.policy_dropdown {
 
 .light_blue {
   color: blue;
+}
+
+.comment_header {
+  margin: 30px;
+  background-color: rgba(12, 105, 235, 0.2);
+}
+
+.comment_body {
+  margin: 30px;
+  border-bottom: 1px solid black;
+}
+
+.red_background {
+  background-color: rgba(245, 66, 66, 0.2)
 }

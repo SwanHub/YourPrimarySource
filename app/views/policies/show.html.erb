@@ -5,7 +5,7 @@
     <% end %></h2>
   <h3 class="text-justify"><%=@policy.description%></h3>
   <form action="/policies" method="get">
-    <button type="submit" name="button">
+    <button class="policy_search" type="submit" name="button">
       <input type="hidden" name="policy[policy_name]" value="<%=@policy.title%>">
       <input type="hidden" name="policy[candidate_id]" value="">
       <%= "Other #{@policy.title} Policies"%>
@@ -13,25 +13,34 @@
   </form>
 </div>
 
+<%= form_tag("/posts/new", method: "get") do %>
+  <input type="hidden" name="policy[id]" value="<%=@policy.id%>">
+  <button class="policy_search" type="submit">
+    Create New Post For <%=@policy.candidates.first.name%> To See!
+  </button>
+<% end %>
+
 <div class="policy_thread">
   <h3><% @policy.posts.reverse.each do |post|%></h3>
-    <p><%=post.created_at.to_date%> :: <%= link_to post.user.full_name, user_path(post.user)%> :: <%= link_to post.title, post_path(post) %></p>
-    <p class="bit_o_left_margin bit_o_right_margin"><%= post.content%></p><br>
+  <div class="policy_response_card">
+    <% if post.validate_post_not_comment%>
 
-    <%= form_tag("/comments/new", method: "get") do %>
-      <input type="hidden" name="post[id]" value="<%=post.id%>">
-      <button class="inputbutton" type="submit">
-        Create Comment
-      </button>
+        <p class="red_background"><%=post.created_at.to_date%> :: <%= link_to post.user.full_name, user_path(post.user)%> :: <%= link_to post.title, post_path(post) %> :: <%= post.content%></p>
+
+        <%post.commenters.each do |comment|%>
+            <small class="comment_header"><%=comment.created_at.to_date%> :: <%= link_to comment.user.full_name, user_path(comment.user)%> :: <%= link_to comment.title, post_path(comment) %></small><br>
+            <small class="comment_body"=><%= comment.content%></small><br><br>
+        <%end%>
+
+        <%= form_tag("/comments/new", method: "get") do %>
+          <input type="hidden" name="post[id]" value="<%=post.id%>">
+          <button class="policy_search" type="submit">
+            Respond
+          </button>
+        <% end %>
+
     <% end %>
+  </div>
 
   <% end %>
 </div>
-
-
-<%= form_tag("/posts/new", method: "get") do %>
-  <input type="hidden" name="policy[id]" value="<%=@policy.id%>">
-  <button class="inputbutton" type="submit">
-    Create New Post
-  </button>
-<% end %>
