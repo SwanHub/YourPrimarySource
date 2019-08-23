@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_23_024335) do
+ActiveRecord::Schema.define(version: 2019_08_23_162505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2019_08_23_024335) do
     t.decimal "total_receipts", precision: 13, scale: 2
     t.decimal "total_disbursements", precision: 13, scale: 2
     t.decimal "cash_on_hand", precision: 13, scale: 2
+    t.boolean "in_race", default: true
   end
 
   create_table "comments", force: :cascade do |t|

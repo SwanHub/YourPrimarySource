@@ -7,7 +7,7 @@
   <form action="/policies" method="get">
     <button class="policy_search" type="submit" name="button">
       <input type="hidden" name="policy[policy_name]" value="<%=@policy.title%>">
-      <input type="hidden" name="policy[candidate_id]" value="">
+      <input type="hidden" name="policy[candidate_id]" value="All Candidates">
       <%= "Other #{@policy.title} Policies"%>
     </button>
   </form>

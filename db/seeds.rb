@@ -26,6 +26,44 @@ require 'csv'
 #     candidate.update(total_receipts: csv[i][1], total_disbursements: csv[i][2], cash_on_hand: csv[i][3])
 #     i += 1
 # end
+<<<<<<< HEAD
+=======
+
+# Cory Booker Seed Information
+  # policy1 = Policy.create(title: "Healthcare", description: "Booker supports Medicare for all. 'Our broken health care system costs too much, is unsustainable, inefficient, unequal and unjust,' he tweeted in March. 'No one living in the richest country in the world should die or go bankrupt because they can’t afford quality care. We need Medicare for all.'")
+  #
+  # policy2 = Policy.create(title: "Criminal Justice Reform", description: "Booker has led within the Democratic Party on criminal justice reform. He helped pass the First Step Act, which freed thousands of inmates sentenced to prison for drug-related offenses. He then introduced the Next Step Act to scale back mandatory minimum sentences for non-violent drug offenses, ban employers from asking prospective hires about their criminal history until late in the interview process, and improve training for law enforcement officers on racial bias issues.")
+  #
+  # policy3 = Policy.create(title: "Immigration", description: "In July, Booker unveiled a plan aimed at fixing America’s immigration system that includes a promise to 'shut down inhumane facilities and require all facilities to meet the highest standards' on his first day in office. The plan also calls for expanding protections for DACA, expanding the availability of legal counseling for migrants seeking asylum, reforming Immigration and Customs Enforcement and Customs and Border Protection, appointing a special envoy to the North Triangle countries (Guatemala, Honduras, and El Salvador) producing many of the migrants traveling to the southern border, reversing immigration policies put in place by the Trump administration, and more. ")
+  #
+  # policy4 = Policy.create(title: "The Climate Crisis", description: "Booker says he backs the Green New Deal and recommitting the U.S. to the Paris climate accord.")
+  #
+  # policy5 = Policy.create(title: "Education", description: "Booker has introduced legislation to make college debt-free. The bill would match state-level investments in higher ed with federal dollars so that students don’t have to take on debt to get a degree.")
+  #
+  # policy6 = Policy.create(title: "Foreign Policy", description: "Foreign policy has not been a centerpiece of Booker’s campaign so far, but as a member of the Senate Foreign Affairs Committee he has spoken out against the Trump administration’s shadow war in Syria and against arm deals with Saudi Arabia. He backed the Iran nuclear deal and condemned Trump’s decision to pull out of it as 'an abdication of American leadership.'")
+  #
+  # policy7 = Policy.create(title: "Guns", description: "Booker’s plan is one of the more ambitious in the field. It calls for universal background checks and mandatory gun licenses to purchase a firearm, ratcheting up federal regulations of gun manufacturers (including giving the Consumer Product Safety Commission the power to oversee the industry), closing the 'gun-show loophole,' and more.")
+  #
+  # policy8 = Policy.create(title: "Reproductive Rights", description: "In May, Booker slammed Georgia’s draconian 'fetal heartbeat' bill as an 'all-out attack on women.' Later that month, he released a plan that includes several measures to bolster reproductive rights, including the creation of a White House Office of Reproductive Freedom that would be 'charged with coordinating and affirmatively advancing abortion rights and access to reproductive health care across my Administration .'")
+  #
+  # policy9 = Policy.create(title: "Poverty and Inequality", description: "Booker’s signature economic policy is 'baby bonds,' which are aimed at closing America’s glaring racial wealth gap by seeding 'American Opportunity Accounts' for children. Every newborn baby in America would get $1,000 in a low-risk savings account managed by the Treasury Department. Children in low-income families would get an additional $2,000 per year until they’re 18.")
+  #
+  # policy10 = Policy.create(title: "Voting Rights", description: "Booker has pledged to put in place a new Voting Rights Act, a package of reforms that would combat voter suppression efforts (like those seen in Georgia’s 2018 gubernatorial election), end partisan gerrymandering, enact universal voter registration, and give former felons the ability to regain their right to vote.")
+  #
+  # policy11 = Policy.create(title: "Reparations", description: "One of the most vocal candidates on the issue, Booker introduced legislation in April to launch a federal commission to study federal reparations for African Americans.")
+  #
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy1.id)
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy2.id)
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy3.id)
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy4.id)
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy5.id)
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy6.id)
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy7.id)
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy8.id)
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy9.id)
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy10.id)
+  # CandidatePolicy.create(candidate_id: 26, policy_id: policy11.id)
+>>>>>>> 36a8679e66e97238b35bf864947c0f413e66cff4
 
 
 # csv = CSV.read("policies3.csv")
