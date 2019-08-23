@@ -32,4 +32,111 @@ class Candidate < ApplicationRecord
     @values
   end
 
-end
+##_____________FINANCIALS METHODS_________________##
+
+##_____________Receipts_________________##
+
+  def self.all_receipts
+      self.all.map{|candidate| candidate.total_receipts}
+  end
+
+  def self.no_nil_receipts
+      self.all_receipts.select{|receipt| receipt != nil}
+  end
+
+  def self.max_receipts
+      self.no_nil_receipts.max
+  end
+
+  def self.min_receipts
+      self.no_nil_receipts.min
+  end
+
+  def self.receipts_spread
+      self.max_receipts - self.min_receipts
+  end
+
+##_____________Disbursements_________________##
+
+  def self.all_disbursements
+      self.all.map{|candidate| candidate.total_disbursements}
+  end
+
+  def self.no_nil_disbursements
+      self.all_disbursements.select{|disbursement| disbursement != nil}
+  end
+
+  def self.max_disbursements
+      self.no_nil_disbursements.max
+  end
+
+  def self.min_disbursements
+      self.no_nil_disbursements.min
+  end
+
+  def self.disbursements_spread
+      self.max_disbursements - self.min_disbursements
+  end
+
+##_____________Cash on Hand_________________##
+
+  def self.all_cash_on_hand
+      self.all.map{|candidate| candidate.cash_on_hand}
+  end
+
+  def self.no_nil_cash_on_hand
+      self.all_cash_on_hand.select{|cash| cash != nil}
+  end
+
+  def self.max_cash_on_hand
+      self.no_nil_cash_on_hand.max
+  end
+
+  def self.min_cash_on_hand
+      self.no_nil_cash_on_hand.min
+  end
+
+  def self.cash_on_hand_spread
+      self.max_cash_on_hand - self.min_cash_on_hand
+  end
+
+##_____________POLLING METHODS_________________##
+
+  def self.candidate_polls
+      self.all.map do |candidate|
+        candidate.polls
+      end
+  end
+
+  def self.no_nil_polls
+      self.candidate_polls.select{|poll| poll != nil}
+  end
+
+  def self.poll_dates
+      self.no_nil_polls.map do |poll|
+        poll.map do |values|
+          value.date
+        end
+      end
+  end
+
+  def self.most_recent_poll
+    Poll.find(self.poll_ids.first)
+  end
+
+  def self.most_recent_poll_value
+    self.most_recent_poll.value
+  end
+
+  def self.oldest_poll
+    Poll.find(self.poll_ids.last)
+  end
+
+  def self.oldest_poll_value
+    self.oldest_poll.value
+  end
+
+  def self.poll_spread
+    self.most_recent_poll_value - self.oldest_poll_value
+  end
+ end

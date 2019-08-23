@@ -96,6 +96,7 @@ Stretch:::
       [x]Add three columns to each candidate
       [x]Get Luke the data.
       [x]Get financial data into the database.
+      [x]Get financial data into Luke's computer
       picture links to fec.gov financial summary.
 
 6. Style
@@ -104,10 +105,11 @@ Stretch:::
       Create charts for polling data
       Create charts based on group financial data.
 
+7. Methods
+      20 total
+
 ============================================================
 Stretch:
       Posts responding to posts. (potentially tonight)
       Deploy to Heroku
-      Post geolocation
-      OmniAuth?
-===========================================================
+============================================================
