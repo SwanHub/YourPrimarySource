@@ -1,6 +1,6 @@
 <form action="/policies" method="get">
   <select class="policy_dropdown" name="policy[policy_name]" id="policy_name">
-    <option selected disabled>Policy</option>
+    <option>All Policies</option>
     <option>Healthcare</option>
     <option>Immigration</option>
     <option>The Climate Crisis</option>
@@ -18,14 +18,12 @@
     <option>Housing</option>
     <option>Family Issues</option>
     <option>Business and Teach Regulation</option>
-    <option></option>
   </select><br>
   <select class="policy_dropdown" name="policy[candidate_id]" id="candidate_id">
-    <option selected disabled>Candidate</option>
+    <option>All Candidates</option>
     <%=@candidates.each do |candidate|%>
       <option value="<%=candidate.id%>"><%=candidate.name%></option>
     <% end%>
-    <option></option>
   </select><br>
   <input class="policy_search" type="submit" name="commit" value="Search">
 </form>

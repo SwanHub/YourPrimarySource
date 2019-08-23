@@ -110,16 +110,21 @@ Stretch:::
       [x]20 total
 
 8. Miscellaneous
+      [x]Add policies for Cory booker.
+      [x]Include "All" in dropdown.
+      Include Policy Title in policy description on policies index.
       sort pages by polling numbers
-      delete Inslees
       change "Post" to "Comment" where applicable on user page.
       Change sort on articles to by date / time. See most recent first.
       Change formatting if only a candidate shows on policy search.
       Change formatting on candidate picture etc. for policy page. frumpy.
           make pictures correct size as well.
       Edit & delete buttons on the policy show page.
+      edit  + new pages style for comments/posts
       Change dates to actual dates? (relevant to many pages)
       Adjust margins for article feed in candidate show page.
+
+      did they drop out? (style="text-decoration:line-through;")
 
 ============================================================
 Stretch:
