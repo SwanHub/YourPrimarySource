@@ -97,14 +97,10 @@ Stretch:::
       [x]Get Luke the data.
       [x]Get financial data into the database.
       [x]Get financial data into Luke's computer
-      picture links to fec.gov financial summary.
 
 6. Style
       [x]Refresh button styling
       [x]Finish User-side styling
-
-      Create charts for polling data
-      Create charts based on group financial data.
 
 7. Methods
       [x]20 total
@@ -119,21 +115,20 @@ Stretch:::
 
       Fix post routing.
       Styling the new post page itself.
-
       Include Policy Title in policy description on policies index.
-
       Change formatting if only a candidate shows on policy search.
       Change formatting on candidate picture etc. for policy page. frumpy.
           make pictures correct size as well.
-
       Change dates to actual dates? (relevant to many pages)
       Adjust margins for article feed in candidate show page.
 
+      FIX the login styling.
+
 9. Dressing
+      [x]Posts responding to posts. (potentially tonight)
       README.md
       Demo Video
 ============================================================
 Stretch:
-      [x]Posts responding to posts. (potentially tonight)
       Deploy to Heroku
 ============================================================

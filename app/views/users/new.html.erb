@@ -1,21 +1,22 @@
-<h1>Create Your Account and find some treasure</h1>
+<h1>Create New Account</h1>
 
 <%= form_for @user do |f|%>
-  <%=f.label :first_name %>
-  <%=f.text_field :first_name %>
 
-  <%=f.label :last_name %>
-  <%=f.text_field :last_name %>
+  <h3><%=f.label :first_name %></h3>
+  <%=f.text_field :first_name %><br>
 
-  <%=f.label :username %>
-  <%=f.text_field :username %>
+  <h3><%=f.label :last_name %></h3>
+  <%=f.text_field :last_name %><br>
 
-  <%=f.label :password %>
-  <%= f.password_field :password%>
+  <h3><%=f.label :username %></h3>
+  <%=f.text_field :username %><br>
 
-  <%=f.label :password_confirmation %>
-  <%=f.password_field :password_confirmation %>
+  <h3><%=f.label :password %></h3>
+  <%= f.password_field :password%><br>
 
-  <%=f.submit %>
+  <h3><%=f.label :password_confirmation %></h3>
+  <%=f.password_field :password_confirmation %><br>
+
+  <input style="margin-top:10px;margin-bottom:20px;" class="policy_search" type="submit" name="commit" value="Create User" data-disable-with="Create User">
 
 <% end %>

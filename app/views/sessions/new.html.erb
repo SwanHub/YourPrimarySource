@@ -2,12 +2,12 @@
 
 <%= form_tag login_path do %>
 
-  <%= label_tag :username%>
+  <h3><%= label_tag :username%></h3>
   <%= text_field_tag :username%>
 
-  <%= label_tag :password %>
-  <%= password_field_tag :password%>
+  <h3><%= label_tag :password %></h3>
+  <%= password_field_tag :password%><br>
 
-  <%= submit_tag "Log In"%>
+  <input style="margin-top:10px;" class="policy_search" type="submit" name="commit" value="Log In!" data-disable-with="Log In!">
 
 <% end %>

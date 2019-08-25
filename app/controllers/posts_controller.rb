@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(policy_id: params[:policy][:id], title: params[:post][:title], content: params[:post][:content], user_id: current_user.id)
     if @post.save
-      redirect_to post_path(@post)
+      redirect_to policy_path(@post.policy)
     else
       render :new
     end
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   def update
       @post = Post.find(params[:id])
       @post.update(post_params)
-      redirect_to post_path(@post)
+      redirect_to policy_path(@post.policy)
   end
 
   def destroy

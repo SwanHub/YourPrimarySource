@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       if @user.save
         flash[:message] = "User success create yahs!"
-        redirect_to user_path(@user)
+        redirect_to login_path
       else
         flash[:alert] = "The limit does not exist. but this username does. Try again."
         render :new

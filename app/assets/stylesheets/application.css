@@ -244,7 +244,15 @@
 }
 
 .policy_response_card {
-  justify-content: flex-start;
+  padding: 10px;
+  border: 1px solid rgb(85, 172, 238, 0.1);
+  border-radius: 10px;
+}
+
+.policy_response_card {
+  padding: 10px;
+  border: 1px solid rgb(85, 172, 238, 0.1);
+  border-radius: 10px;
 }
 
 /* Candidate show page refresh button */
@@ -389,11 +397,14 @@ select.policy_dropdown {
   justify-content: flex-start;
   text-align: justify;
   text-align-last:center;
+  border-bottom: 1px solid rgba(42, 42, 42, 0.1);
+  padding-bottom: 15px;
 }
 
 .description {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .light_blue {
@@ -421,6 +432,8 @@ select.policy_dropdown {
 .new_form_title {
   border-radius: 3px;
   border: 1px solid rgba(12, 105, 235, 0.2);
+  width: 30%;
+  margin-bottom: 4px;
 }
 
 .new_form_title:focus {
@@ -443,4 +456,14 @@ select.policy_dropdown {
   width: 50%;
   border-radius: 3px;
   border: 1px solid rgba(12, 105, 235, 0.2);
+}
+
+#user_first_name, #user_last_name, #user_username, #user_password, #user_password_confirmation, #username, #password {
+  padding: 10px;
+  width: 40%;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Brandon Grotesque', sans-serif;
+  border-radius: 5px;
+  border:1px solid rgba(21, 21, 21, 0.1);
 }

@@ -1,3 +1,5 @@
+
+
 <form action="/policies" method="get">
   <select class="policy_dropdown" name="policy[policy_name]" id="policy_name">
     <option>All Policies</option>
@@ -39,6 +41,7 @@
 
       <div class="policy_item">
         <p class="description"><%= policy.description%></p>
+        <small class="policy_search"><%= link_to "Respond", policy_path(policy)%></small>
       </div>
     </div>
   <% end%>

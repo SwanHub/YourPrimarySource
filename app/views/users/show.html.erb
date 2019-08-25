@@ -10,14 +10,14 @@
         <p class="red_background emphasis"><%=post.created_at.to_date%> :: <%= link_to post.title, post_path(post)%> :: <%=post.content%></p>
         <p class="bit_o_left_margin de-emphasis"><%=post.post_or_comment%> on
           <%= link_to post.policy.candidates.first.name, candidate_path(post.policy.candidates.first)%>'s
-          <%=link_to post.policy.title, policies_path%> Policy</p>
+          <%=link_to post.policy.title, policy_path(post.policy)%> Policy</p>
 
       <% else %>
 
         <p class="blue_background emphasis"><%=post.created_at.to_date%> :: <%= link_to post.title, post_path(post)%> :: <%=post.content%></p>
         <p class="bit_o_left_margin de-emphasis"><%=post.post_or_comment%> on
           <%= link_to post.policy.candidates.first.name, candidate_path(post.policy.candidates.first)%>'s
-          <%=link_to post.policy.title, policies_path%> Policy</p>
+          <%=link_to post.policy.title, policy_path(post.policy)%> Policy</p>
 
       <% end %>
     </div>

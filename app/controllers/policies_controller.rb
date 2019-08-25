@@ -22,8 +22,6 @@ class PoliciesController < ApplicationController
               @policies = candidate.policies
           end
       end
-
-
   end
 
   def show

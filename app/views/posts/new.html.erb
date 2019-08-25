@@ -15,12 +15,12 @@
 
 <%= form_for(@post) do |f| %>
   <%= f.label :title %><br>
-  <input class="new_form_title" type="text" name="post[title]" id="post_title"><br>
+  <input autocomplete="off" class="new_form_title" type="text" name="post[title]" id="post_title"><br>
 
   <%= f.label :content %><br>
-  <textarea class="new_form_content" name="post[content]" id="post_content" rows="3"></textarea><br>
+  <textarea autocomplete="off" class="new_form_content" name="post[content]" id="post_content" rows="3"></textarea><br>
 
   <input type="hidden" name="policy[id]" value="<%=@policy.id%>">
 
-  <%= f.submit %>
+  <input class="policy_search" type="submit" name="commit" value="Post" data-disable-with="Post">
 <% end %>

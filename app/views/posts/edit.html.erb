@@ -1,11 +1,13 @@
-<%= form_for(@post) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+<h2>Edit Post</h2>
 
-  <%= f.label :content %>
-  <%= f.text_area :content %>
+<%= form_for(@post) do |f| %>
+  <%= f.label :title %><br>
+  <input value="<%=@post.title%>"class="new_form_title" type="text" name="post[title]" id="post_title"><br>
+
+  <%= f.label :content %><br>
+  <textarea class="new_form_content" name="post[content]" id="post_content" rows="3"><%=@post.content%></textarea><br>
 
   <input type="hidden" name="policy[id]" value="<%=@post.id%>">
 
-  <%= f.submit %>
+  <input class="policy_search" type="submit" name="commit" value="Post" data-disable-with="Post">
 <% end %>
